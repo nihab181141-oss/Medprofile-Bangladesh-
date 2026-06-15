@@ -33,6 +33,25 @@ export default function App() {
   const [callbackPhone, setCallbackPhone] = useState("");
   const [callbackSent, setCallbackSent] = useState(false);
 
+  React.useEffect(() => {
+    // Dynamic canonical URL injection based on current window location pathname
+    const link = document.getElementById("canonical-link") as HTMLLinkElement;
+    if (link) {
+      const baseUrl = "https://medprofile-bangladesh.vercel.app";
+      // Sanitize standard pathname
+      let currentPath = window.location.pathname || "/";
+      if (!currentPath.startsWith("/")) {
+        currentPath = "/" + currentPath;
+      }
+      // Strip trailing slash if present on subroutes to match the sitemap entries
+      if (currentPath.length > 1 && currentPath.endsWith("/")) {
+        currentPath = currentPath.slice(0, -1);
+      }
+      const canonicalUrl = `${baseUrl}${currentPath === "/" ? "" : currentPath}`;
+      link.setAttribute("href", canonicalUrl);
+    }
+  }, []);
+
   const handleCallbackSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (callbackName && callbackPhone) {
