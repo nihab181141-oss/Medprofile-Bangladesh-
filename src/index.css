@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-display: "Outfit", system-ui, sans-serif;
+  
+  --color-medical-dark: #0f172a;
+  --color-medical-primary: #0f766e; /* Teal-700 */
+  --color-medical-teal: #0d9488;
+  --color-medical-accent: #38bdf8;
+}
+
+/* Custom modern animations in Tailwind v4 */
+@keyframes tilt-slow {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+}
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes blob-bounce {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -40px) scale(1.15);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+.animate-tilt-slow {
+  animation: tilt-slow 8s infinite linear;
+}
+
+.animate-float-gentle {
+  animation: float-gentle 6s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 5s infinite ease-in-out;
+}
+
+.animate-blob-bounce-1 {
+  animation: blob-bounce 15s infinite alternate ease-in-out;
+}
+
+.animate-blob-bounce-2 {
+  animation: blob-bounce 18s infinite alternate-reverse ease-in-out;
+}
+
+/* Premium utility classes */
+@layer utilities {
+  .text-glow-accent {
+    text-shadow: 0 0 30px rgba(13, 148, 136, 0.25);
+  }
+  
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  
+  .glass-panel-dark {
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .glow-teal {
+    box-shadow: 0 0 50px -10px rgba(13, 148, 136, 0.15);
+  }
+  
+  .glow-blue {
+    box-shadow: 0 0 50px -10px rgba(14, 165, 233, 0.15);
+  }
+}
+
+/* Setup root preferences */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+}
+
+body {
+  background-color: #fafafc;
+}
