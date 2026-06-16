@@ -412,8 +412,9 @@ export default function App() {
               ) : (
                 <form onSubmit={handleCallbackSubmit} className="space-y-3">
                   <div>
-                    <label className="block text-[10px] uppercase font-bold text-gray-400 tracking-wider mb-1">Doctor Name</label>
+                    <label htmlFor="callback-doc-name" className="block text-[10px] uppercase font-bold text-gray-400 tracking-wider mb-1">Doctor Name</label>
                     <input 
+                      id="callback-doc-name"
                       type="text" 
                       required 
                       value={callbackName} 
@@ -424,8 +425,9 @@ export default function App() {
                   </div>
 
                   <div>
-                    <label className="block text-[10px] uppercase font-bold text-gray-400 tracking-wider mb-1">Mobile Hotline Phone</label>
+                    <label htmlFor="callback-hotline-phone" className="block text-[10px] uppercase font-bold text-gray-400 tracking-wider mb-1">Mobile Hotline Phone</label>
                     <input 
+                      id="callback-hotline-phone"
                       type="tel" 
                       required 
                       value={callbackPhone} 

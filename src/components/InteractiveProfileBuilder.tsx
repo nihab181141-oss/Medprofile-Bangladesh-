@@ -296,7 +296,7 @@ export default function InteractiveProfileBuilder() {
 
           <div className="grid grid-cols-1 gap-3.5">
             <div>
-              <label className="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1">Doctor Full Name</label>
+              <label htmlFor="input-doc-name" className="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1">Doctor Full Name</label>
               <div className="relative">
                 <User className="absolute left-3 top-2.5 w-4 h-4 text-slate-400" />
                 <input 
@@ -313,10 +313,11 @@ export default function InteractiveProfileBuilder() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
               <div>
-                <label className="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1">Specialization</label>
+                <label htmlFor="input-specialty" className="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1">Specialization</label>
                 <div className="relative">
                   <Stethoscope className="absolute left-3 top-2.5 w-4 h-4 text-slate-400" />
                   <input 
+                    id="input-specialty"
                     type="text" 
                     name="specialty" 
                     value={inputs.specialty} 
@@ -328,10 +329,11 @@ export default function InteractiveProfileBuilder() {
               </div>
 
               <div>
-                <label className="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1">Degrees & Credentials</label>
+                <label htmlFor="input-degrees" className="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1">Degrees & Credentials</label>
                 <div className="relative">
                   <Award className="absolute left-3 top-2.5 w-4 h-4 text-slate-400" />
                   <input 
+                    id="input-degrees"
                     type="text" 
                     name="degrees" 
                     value={inputs.degrees} 
@@ -344,8 +346,9 @@ export default function InteractiveProfileBuilder() {
             </div>
 
             <div>
-              <label className="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1">Chamber / General Clinic Name</label>
+              <label htmlFor="input-chamber-name" className="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1">Chamber / General Clinic Name</label>
               <input 
+                id="input-chamber-name"
                 type="text" 
                 name="chamberName" 
                 value={inputs.chamberName} 
@@ -356,10 +359,11 @@ export default function InteractiveProfileBuilder() {
             </div>
 
             <div>
-              <label className="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1">Chamber Physical Address</label>
+              <label htmlFor="input-chamber-address" className="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1">Chamber Physical Address</label>
               <div className="relative">
                 <MapPin className="absolute left-3 top-2.5 w-4 h-4 text-slate-400" />
                 <input 
+                  id="input-chamber-address"
                   type="text" 
                   name="chamberAddress" 
                   value={inputs.chamberAddress} 
@@ -372,10 +376,11 @@ export default function InteractiveProfileBuilder() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
               <div>
-                <label className="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1">Consultation Time Slopes</label>
+                <label htmlFor="input-working-hours" className="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1">Consultation Time Slopes</label>
                 <div className="relative">
                   <Clock className="absolute left-3 top-2.5 w-4 h-4 text-slate-400" />
                   <input 
+                    id="input-working-hours"
                     type="text" 
                     name="workingHours" 
                     value={inputs.workingHours} 
@@ -387,10 +392,11 @@ export default function InteractiveProfileBuilder() {
               </div>
 
               <div>
-                <label className="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1">Appointment Hot-Line</label>
+                <label htmlFor="input-contact-phone" className="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1">Appointment Hot-Line</label>
                 <div className="relative">
                   <Phone className="absolute left-3 top-2.5 w-4 h-4 text-slate-400" />
                   <input 
+                    id="input-contact-phone"
                     type="text" 
                     name="contactPhone" 
                     value={inputs.contactPhone} 
@@ -403,8 +409,9 @@ export default function InteractiveProfileBuilder() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
               <div>
-                <label className="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1">Language Dialect</label>
+                <label htmlFor="select-language" className="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1">Language Dialect</label>
                 <select 
+                  id="select-language"
                   name="language" 
                   value={inputs.language} 
                   onChange={handleInputChange}
