@@ -26,6 +26,7 @@ import FeaturesGrid from "./components/FeaturesGrid";
 import ProcessFlow from "./components/ProcessFlow";
 import InteractiveProfileBuilder from "./components/InteractiveProfileBuilder";
 import PricingSection from "./components/PricingSection";
+import FounderSection from "./components/FounderSection";
 import FAQSection from "./components/FAQSection";
 import ContactAndGallery from "./components/ContactAndGallery";
 
@@ -327,6 +328,9 @@ export default function App() {
 
       {/* SECTION 6 — PRICING */}
       <PricingSection />
+
+      {/* FOUNDER & LEADERSHIP SECTION */}
+      <FounderSection />
 
       {/* SECTION 7 — FAQ */}
       <FAQSection />
