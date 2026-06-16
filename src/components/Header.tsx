@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ShieldCheck, Calendar, Menu, X, ArrowRight, MessageSquare } from "lucide-react";
+import LogoIcon from "./LogoIcon";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -18,11 +19,7 @@ export default function Header() {
         
         {/* Brand Logotype */}
         <div className="flex items-center gap-3 cursor-pointer select-none group" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-          <div className="w-10 h-10 bg-gradient-to-tr from-teal-600 to-teal-500 rounded-xl flex items-center justify-center text-white shadow-md shadow-teal-500/10 transition-all duration-300 group-hover:scale-105 group-hover:rotate-3">
-            <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-            </svg>
-          </div>
+          <LogoIcon className="w-10 h-10 transition-all duration-300 group-hover:scale-105 group-hover:rotate-3 shrink-0" />
           <div className="flex flex-col">
             <span className="text-lg sm:text-xl font-bold tracking-tight text-slate-900 group-hover:text-teal-600 transition-colors duration-200">
               MEDPROFILE <span className="text-teal-600 font-extrabold">BANGLADESH</span>

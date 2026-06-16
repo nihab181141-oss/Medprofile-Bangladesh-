@@ -20,6 +20,7 @@ import {
 
 // Import modular sections
 import Header from "./components/Header";
+import LogoIcon from "./components/LogoIcon";
 import WhyChoose from "./components/WhyChoose";
 import FeaturesGrid from "./components/FeaturesGrid";
 import ProcessFlow from "./components/ProcessFlow";
@@ -459,11 +460,7 @@ export default function App() {
           {/* Col 1: Brand details */}
           <div className="md:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-teal-600 rounded-lg flex items-center justify-center text-white font-bold select-none text-sm">
-                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                </svg>
-              </div>
+              <LogoIcon className="w-10 h-10 shrink-0" light={true} />
               <div className="flex flex-col">
                 <span className="font-display font-bold text-base text-white tracking-wide">MEDPROFILE <span className="text-teal-400">BANGLADESH</span></span>
                 <span className="text-[9px] uppercase tracking-[0.2em] font-semibold text-slate-400 -mt-0.5">Building Digital Identity</span>
