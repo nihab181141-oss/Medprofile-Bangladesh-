@@ -30,6 +30,7 @@ import FounderSection from "./components/FounderSection";
 import FAQSection from "./components/FAQSection";
 import ContactAndGallery from "./components/ContactAndGallery";
 import OurProjects from "./components/OurProjects";
+import ProjectsIntroBlock from "./components/ProjectsIntroBlock";
 
 export default function App() {
   const [callbackName, setCallbackName] = useState("");
@@ -38,8 +39,15 @@ export default function App() {
 
   // Initialize view from URL pathname or hash smoothly
   const [currentView, setCurrentView] = useState<"landing" | "projects">(() => {
-    const path = window.location.pathname;
-    if (path === "/projects" || path === "/our-projects" || window.location.hash === "#projects") {
+    const origPath = window.location.pathname.toLowerCase().trim();
+    const path = origPath.endsWith("/") && origPath.length > 1 ? origPath.slice(0, -1) : origPath;
+    if (
+      path === "/projects" || 
+      path === "/projects.html" || 
+      path === "/our-projects" || 
+      path === "/our-projects.html" || 
+      window.location.hash === "#projects"
+    ) {
       return "projects";
     }
     return "landing";
@@ -48,8 +56,15 @@ export default function App() {
   // Listen to popstate event for premium back/forward browser button navigation
   React.useEffect(() => {
     const handlePopState = () => {
-      const path = window.location.pathname;
-      if (path === "/projects" || path === "/our-projects" || window.location.hash === "#projects") {
+      const origPath = window.location.pathname.toLowerCase().trim();
+      const path = origPath.endsWith("/") && origPath.length > 1 ? origPath.slice(0, -1) : origPath;
+      if (
+        path === "/projects" || 
+        path === "/projects.html" || 
+        path === "/our-projects" || 
+        path === "/our-projects.html" || 
+        window.location.hash === "#projects"
+      ) {
         setCurrentView("projects");
         window.scrollTo({ top: 0, behavior: "instant" });
       } else {
@@ -387,6 +402,9 @@ export default function App() {
 
       {/* SECTION 4 — HOW IT WORKS */}
       <ProcessFlow />
+
+      {/* NEW — OUR PROJECTS INTRO BLOCK */}
+      <ProjectsIntroBlock setCurrentView={setCurrentView} />
 
       {/* SECTION 5 — DEMO PREVIEW (Sandbox Sandbox Builder with Gemini HIGH thinking) */}
       <section id="demo-sandbox" className="py-20 md:py-28 bg-white border-b border-gray-150 scroll-mt-6">
