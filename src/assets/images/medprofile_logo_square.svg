@@ -1,0 +1,57 @@
+<svg width="500" height="500" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Glowing subtle brand ambient shadow helper -->
+  <circle cx="250" cy="250" r="230" fill="white"/>
+
+  <!-- Centered Scaled MP Logo Icon Emblem -->
+  <g transform="translate(122, 60) scale(2.8)">
+    <!-- Custom sharp 'M' -->
+    <path 
+      d="M 5,85 L 5,22 L 21,33 L 28,62 L 35,22 L 51,33 L 51,85 L 38,85 L 28,48 L 18,85 Z" 
+      fill="#012b5c" 
+    />
+    
+    <!-- Custom elegant 'P' with curved base -->
+    <path 
+      d="M 66,85 L 66,61 L 76,61 C 86.5,61 95,52.5 95,41.5 C 95,30.5 86.5,22 76,22 L 54,22 L 54,70 Q 54,85 66,85 Z" 
+      fill="#0c9c76" 
+    />
+    
+    <!-- White Medical Cross cutout inside 'P' loop -->
+    <path 
+      d="M 75,29.5 H 81 V 38.5 H 90 V 44.5 H 81 V 53.5 H 75 V 44.5 H 66 V 38.5 H 75 Z" 
+      fill="white" 
+    />
+  </g>
+
+  <!-- MEDPROFILE Typography -->
+  <text 
+    x="250" 
+    y="346" 
+    text-anchor="middle" 
+    font-family="system-ui, -apple-system, 'SF Pro Display', 'Inter', sans-serif" 
+    font-weight="900" 
+    font-size="44" 
+    letter-spacing="2"
+  >
+    <tspan fill="#012b5c">MED</tspan><tspan fill="#0c9c76">PROFILE</tspan>
+  </text>
+
+  <!-- BANGLADESH Sub-brand with side accent rules -->
+  <!-- Left horizontal green line -->
+  <line x1="72" y1="396" x2="135" y2="396" stroke="#0c9c76" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- "BANGLADESH" letters -->
+  <text 
+    x="254" 
+    y="404" 
+    text-anchor="middle" 
+    fill="#012b5c" 
+    font-family="system-ui, -apple-system, 'SF Pro Text', 'Inter', sans-serif" 
+    font-weight="800" 
+    font-size="20.5" 
+    letter-spacing="9"
+  >BANGLADESH</text>
+  
+  <!-- Right horizontal green line -->
+  <line x1="365" y1="396" x2="428" y2="396" stroke="#0c9c76" stroke-width="3" stroke-linecap="round"/>
+</svg>

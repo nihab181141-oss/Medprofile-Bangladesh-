@@ -29,11 +29,93 @@ import PricingSection from "./components/PricingSection";
 import FounderSection from "./components/FounderSection";
 import FAQSection from "./components/FAQSection";
 import ContactAndGallery from "./components/ContactAndGallery";
+import OurProjects from "./components/OurProjects";
 
 export default function App() {
   const [callbackName, setCallbackName] = useState("");
   const [callbackPhone, setCallbackPhone] = useState("");
   const [callbackSent, setCallbackSent] = useState(false);
+
+  // Initialize view from URL pathname or hash smoothly
+  const [currentView, setCurrentView] = useState<"landing" | "projects">(() => {
+    const path = window.location.pathname;
+    if (path === "/projects" || path === "/our-projects" || window.location.hash === "#projects") {
+      return "projects";
+    }
+    return "landing";
+  });
+
+  // Listen to popstate event for premium back/forward browser button navigation
+  React.useEffect(() => {
+    const handlePopState = () => {
+      const path = window.location.pathname;
+      if (path === "/projects" || path === "/our-projects" || window.location.hash === "#projects") {
+        setCurrentView("projects");
+        window.scrollTo({ top: 0, behavior: "instant" });
+      } else {
+        setCurrentView("landing");
+        window.scrollTo({ top: 0, behavior: "instant" });
+      }
+    };
+
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, []);
+
+  // Sync title and SEO metadata dynamically for maximized trust and Vercel/SaaS level SEO
+  React.useEffect(() => {
+    if (currentView === "projects") {
+      document.title = "Our Projects | MedProfile Bangladesh";
+      
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) {
+        metaDesc.setAttribute("content", "Explore professional doctor websites developed by MedProfile Bangladesh and discover how we help healthcare professionals build trusted digital identities.");
+      }
+      
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      if (ogTitle) ogTitle.setAttribute("content", "Our Projects | MedProfile Bangladesh");
+      
+      const ogDesc = document.querySelector('meta[property="og:description"]');
+      if (ogDesc) ogDesc.setAttribute("content", "Explore professional doctor websites developed by MedProfile Bangladesh and discover how we help healthcare professionals build trusted digital identities.");
+      
+      const twTitle = document.querySelector('meta[name="twitter:title"]');
+      if (twTitle) twTitle.setAttribute("content", "Our Projects | MedProfile Bangladesh");
+
+      const twDesc = document.querySelector('meta[name="twitter:description"]');
+      if (twDesc) twDesc.setAttribute("content", "Explore professional doctor websites developed by MedProfile Bangladesh and discover how we help healthcare professionals build trusted digital identities.");
+
+      // Structured Schema Markup
+      let schemaScript = document.getElementById("projects-schema") as HTMLScriptElement;
+      if (!schemaScript) {
+        schemaScript = document.createElement("script");
+        schemaScript.id = "projects-schema";
+        schemaScript.type = "application/ld+json";
+        document.head.appendChild(schemaScript);
+      }
+      schemaScript.textContent = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Our Projects | MedProfile Bangladesh",
+        "description": "Explore professional doctor websites developed by MedProfile Bangladesh and discover how we help healthcare professionals build trusted digital identities.",
+        "url": `${window.location.origin}/projects`,
+        "provider": {
+          "@type": "Organization",
+          "name": "MedProfile Bangladesh",
+          "url": window.location.origin
+        }
+      });
+    } else {
+      document.title = "MedProfile Bangladesh | Building Professional Digital Identity for Doctors";
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) {
+        metaDesc.setAttribute("content", "Establishes an authoritative web presence and compliant SEO blueprints for doctors in Bangladesh. Direct BMDC compliance, ultra-fast templates, and appointment support.");
+      }
+      const schemaScript = document.getElementById("projects-schema");
+      if (schemaScript) {
+        schemaScript.remove();
+      }
+    }
+  }, [currentView]);
 
   React.useEffect(() => {
     // Dynamic canonical URL injection based on current window location pathname
@@ -77,9 +159,13 @@ export default function App() {
     <div className="min-h-screen bg-slate-50/50 text-slate-800 antialiased font-sans">
       
       {/* GLOBAL NAVBAR HEADER */}
-      <Header />
+      <Header currentView={currentView} setCurrentView={setCurrentView} />
 
-      {/* SECTION 1 — HERO SECTION */}
+      {currentView === "projects" ? (
+        <OurProjects />
+      ) : (
+        <>
+          {/* SECTION 1 — HERO SECTION */}
       <section className="relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50/30 pt-12 pb-24 md:py-36 border-b border-slate-200/60">
         
         {/* Soft Animated Background Blobs */}
@@ -456,6 +542,8 @@ export default function App() {
 
         </div>
       </section>
+        </>
+      )}
 
       {/* FOOTER */}
       <footer className="bg-slate-900 text-gray-300 py-16 px-4 border-t border-slate-800 font-sans">

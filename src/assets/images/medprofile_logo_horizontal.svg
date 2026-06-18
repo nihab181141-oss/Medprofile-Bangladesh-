@@ -1,0 +1,51 @@
+<svg width="450" height="100" viewBox="0 0 450 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Crisp rendering optimizations -->
+  <g transform="translate(10, 5) scale(1.05)">
+    <!-- Custom elegant 'M' in Navy Blue -->
+    <path 
+      d="M 5,85 L 5,22 L 21,33 L 28,62 L 35,22 L 51,33 L 51,85 L 38,85 L 28,48 L 18,85 Z" 
+      fill="#012b5c" 
+    />
+    
+    <!-- Custom signature 'P' in Emerald Green -->
+    <path 
+      d="M 66,85 L 66,61 L 76,61 C 86.5,61 95,52.5 95,41.5 C 95,30.5 86.5,22 76,22 L 54,22 L 54,70 Q 54,85 66,85 Z" 
+      fill="#0c9c76" 
+    />
+    
+    <!-- White Medical Cross inside 'P' -->
+    <path 
+      d="M 75,29.5 H 81 V 38.5 H 90 V 44.5 H 81 V 53.5 H 75 V 44.5 H 66 V 38.5 H 75 Z" 
+      fill="white" 
+    />
+  </g>
+
+  <!-- Typography Alignment Group -->
+  <g transform="translate(130, 0)">
+    <!-- MEDPROFILE Capital Letters -->
+    <text 
+      x="0" 
+      y="50" 
+      font-family="system-ui, -apple-system, 'SF Pro Display', 'Inter', sans-serif" 
+      font-weight="950" 
+      font-size="34" 
+      letter-spacing="1"
+    >
+      <tspan fill="#012b5c">MED</tspan><tspan fill="#0c9c76">PROFILE</tspan>
+    </text>
+
+    <!-- Sleek thin dividing green rule -->
+    <line x1="0" y1="62" x2="230" y2="62" stroke="#0c9c76" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- BANGLADESH with generous modern tracking -->
+    <text 
+      x="2" 
+      y="80" 
+      fill="#012b5c" 
+      font-family="system-ui, -apple-system, 'SF Pro Text', 'Inter', sans-serif" 
+      font-weight="800" 
+      font-size="14" 
+      letter-spacing="7.5"
+    >BANGLADESH</text>
+  </g>
+</svg>
