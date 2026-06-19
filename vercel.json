@@ -18,6 +18,18 @@
       "destination": "/index.html"
     },
     {
+      "source": "/templates",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/templates.html",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/website-templates",
+      "destination": "/index.html"
+    },
+    {
       "source": "/robots.txt",
       "destination": "/robots.txt"
     },

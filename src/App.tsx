@@ -31,6 +31,8 @@ import FAQSection from "./components/FAQSection";
 import ContactAndGallery from "./components/ContactAndGallery";
 import OurProjects from "./components/OurProjects";
 import ProjectsIntroBlock from "./components/ProjectsIntroBlock";
+import TemplatesPage from "./components/TemplatesPage";
+import TemplatesIntroBlock from "./components/TemplatesIntroBlock";
 
 export default function App() {
   const [callbackName, setCallbackName] = useState("");
@@ -38,7 +40,7 @@ export default function App() {
   const [callbackSent, setCallbackSent] = useState(false);
 
   // Initialize view from URL pathname or hash smoothly
-  const [currentView, setCurrentView] = useState<"landing" | "projects">(() => {
+  const [currentView, setCurrentView] = useState<"landing" | "projects" | "templates">(() => {
     const origPath = window.location.pathname.toLowerCase().trim();
     const path = origPath.endsWith("/") && origPath.length > 1 ? origPath.slice(0, -1) : origPath;
     if (
@@ -49,6 +51,14 @@ export default function App() {
       window.location.hash === "#projects"
     ) {
       return "projects";
+    }
+    if (
+      path === "/templates" ||
+      path === "/templates.html" ||
+      path === "/website-templates" ||
+      window.location.hash === "#templates"
+    ) {
+      return "templates";
     }
     return "landing";
   });
@@ -66,6 +76,14 @@ export default function App() {
         window.location.hash === "#projects"
       ) {
         setCurrentView("projects");
+        window.scrollTo({ top: 0, behavior: "instant" });
+      } else if (
+        path === "/templates" ||
+        path === "/templates.html" ||
+        path === "/website-templates" ||
+        window.location.hash === "#templates"
+      ) {
+        setCurrentView("templates");
         window.scrollTo({ top: 0, behavior: "instant" });
       } else {
         setCurrentView("landing");
@@ -113,6 +131,46 @@ export default function App() {
         "name": "Our Projects | MedProfile Bangladesh",
         "description": "Explore professional doctor websites developed by MedProfile Bangladesh and discover how we help healthcare professionals build trusted digital identities.",
         "url": `${window.location.origin}/projects`,
+        "provider": {
+          "@type": "Organization",
+          "name": "MedProfile Bangladesh",
+          "url": window.location.origin
+        }
+      });
+    } else if (currentView === "templates") {
+      document.title = "Doctor Website Templates | MedProfile Bangladesh";
+      
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) {
+        metaDesc.setAttribute("content", "Explore premium doctor website templates developed by MedProfile Bangladesh and choose the perfect design for your professional digital identity.");
+      }
+      
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      if (ogTitle) ogTitle.setAttribute("content", "Doctor Website Templates | MedProfile Bangladesh");
+      
+      const ogDesc = document.querySelector('meta[property="og:description"]');
+      if (ogDesc) ogDesc.setAttribute("content", "Explore premium doctor website templates developed by MedProfile Bangladesh and choose the perfect design for your professional digital identity.");
+      
+      const twTitle = document.querySelector('meta[name="twitter:title"]');
+      if (twTitle) twTitle.setAttribute("content", "Doctor Website Templates | MedProfile Bangladesh");
+
+      const twDesc = document.querySelector('meta[name="twitter:description"]');
+      if (twDesc) twDesc.setAttribute("content", "Explore premium doctor website templates developed by MedProfile Bangladesh and choose the perfect design for your professional digital identity.");
+
+      // Structured Schema Markup
+      let schemaScript = document.getElementById("projects-schema") as HTMLScriptElement;
+      if (!schemaScript) {
+        schemaScript = document.createElement("script");
+        schemaScript.id = "projects-schema";
+        schemaScript.type = "application/ld+json";
+        document.head.appendChild(schemaScript);
+      }
+      schemaScript.textContent = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Doctor Website Templates | MedProfile Bangladesh",
+        "description": "Explore premium doctor website templates developed by MedProfile Bangladesh and choose the perfect design for your professional digital identity.",
+        "url": `${window.location.origin}/templates`,
         "provider": {
           "@type": "Organization",
           "name": "MedProfile Bangladesh",
@@ -178,6 +236,8 @@ export default function App() {
 
       {currentView === "projects" ? (
         <OurProjects />
+      ) : currentView === "templates" ? (
+        <TemplatesPage />
       ) : (
         <>
           {/* SECTION 1 — HERO SECTION */}
@@ -405,6 +465,9 @@ export default function App() {
 
       {/* NEW — OUR PROJECTS INTRO BLOCK */}
       <ProjectsIntroBlock setCurrentView={setCurrentView} />
+
+      {/* NEW — WEBSITE TEMPLATES INTRO BLOCK */}
+      <TemplatesIntroBlock setCurrentView={setCurrentView} />
 
       {/* SECTION 5 — DEMO PREVIEW (Sandbox Sandbox Builder with Gemini HIGH thinking) */}
       <section id="demo-sandbox" className="py-20 md:py-28 bg-white border-b border-gray-150 scroll-mt-6">

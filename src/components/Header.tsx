@@ -3,8 +3,8 @@ import { ShieldCheck, Calendar, Menu, X, ArrowRight, MessageSquare } from "lucid
 import LogoIcon from "./LogoIcon";
 
 interface HeaderProps {
-  currentView: "landing" | "projects";
-  setCurrentView: (view: "landing" | "projects") => void;
+  currentView: "landing" | "projects" | "templates";
+  setCurrentView: (view: "landing" | "projects" | "templates") => void;
 }
 
 export default function Header({ currentView, setCurrentView }: HeaderProps) {
@@ -32,6 +32,13 @@ export default function Header({ currentView, setCurrentView }: HeaderProps) {
   const navigateToProjects = () => {
     setCurrentView("projects");
     window.history.pushState(null, "", "/projects");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setMobileMenuOpen(false);
+  };
+
+  const navigateToTemplates = () => {
+    setCurrentView("templates");
+    window.history.pushState(null, "", "/templates");
     window.scrollTo({ top: 0, behavior: "smooth" });
     setMobileMenuOpen(false);
   };
@@ -95,10 +102,13 @@ export default function Header({ currentView, setCurrentView }: HeaderProps) {
             <span className="text-[9px] font-bold text-teal-600 bg-teal-50 px-1.5 py-0.5 rounded border border-teal-150 group-hover/btn:bg-teal-600 group-hover/btn:text-white transition-all duration-300">Builder</span>
           </button>
           <button 
-            onClick={() => navigateToSection("demo-gallery")}
-            className="hover:text-teal-600 transition-colors cursor-pointer relative py-1.5 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-teal-600 after:transition-all after:duration-300"
+            onClick={navigateToTemplates}
+            className={`transition-colors cursor-pointer relative py-1.5 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-teal-600 after:transition-all after:duration-300 flex items-center gap-1 group/tpl ${
+              currentView === "templates" ? "text-teal-600 font-extrabold after:w-full" : "hover:text-teal-600 text-slate-651"
+            }`}
           >
-            Templates
+            <span>Templates</span>
+            <span className="text-[8px] font-extrabold text-white bg-teal-600 px-1.5 py-0.5 rounded leading-none">6 LIVE</span>
           </button>
           <button 
             onClick={() => navigateToSection("pricing-section")}
@@ -183,10 +193,13 @@ export default function Header({ currentView, setCurrentView }: HeaderProps) {
               <span className="text-[8px] uppercase tracking-wider font-extrabold text-teal-600 bg-teal-50 px-2 py-0.5 rounded border border-teal-150">Active</span>
             </button>
             <button 
-              onClick={() => navigateToSection("demo-gallery")}
-              className="w-full text-left py-2 px-3 text-sm font-bold text-slate-700 hover:bg-slate-50 hover:text-teal-600 rounded-lg transition-colors"
+              onClick={navigateToTemplates}
+              className={`w-full text-left py-2 px-3 text-sm font-bold rounded-lg transition-colors flex items-center justify-between ${
+                currentView === "templates" ? "bg-teal-50 text-teal-600 font-extrabold" : "text-slate-700 hover:bg-slate-50 hover:text-teal-600"
+              }`}
             >
-              Website Templates
+              <span>Website Templates</span>
+              <span className="text-[8px] uppercase tracking-wider font-extrabold text-teal-600 bg-teal-50 px-2 py-0.5 rounded border border-teal-150">6 Designs</span>
             </button>
             <button 
               onClick={() => navigateToSection("pricing-section")}
