@@ -226,100 +226,104 @@ export default function TemplatesPage() {
             {filteredTemplates.map((tpl, idx) => (
               <motion.div
                 key={tpl.id}
-                initial={{ opacity: 0, y: 25 }}
+                initial={{ opacity: 0, y: 35 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: idx * 0.08 }}
-                className="bg-white rounded-2xl border border-slate-200/85 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+                transition={{ duration: 0.6, delay: idx * 0.08 }}
+                className="bg-slate-950 rounded-2xl border border-slate-800/70 overflow-hidden shadow-lg hover:shadow-[0_25px_50px_-12px_rgba(20,184,166,0.18)] hover:border-teal-500/50 hover:scale-[1.03] flex flex-col justify-between group transition-all duration-500 ease-out"
               >
-                
-                {/* 5. Image & Mockup Device Lockup */}
-                <div className="relative aspect-[16/10] overflow-hidden bg-slate-100 group-hover:scale-[1.01] transition-transform duration-300">
-                  {/* Absolute Badge */}
-                  <div className="absolute top-4 left-4 z-10 flex gap-2">
-                    <span className="text-[10px] font-extrabold uppercase bg-slate-900 border border-slate-800 text-teal-400 px-2.5 py-1 rounded-full shadow-md">
+                {/* macOS Style Browser Header */}
+                <div className="bg-slate-900 border-b border-slate-800 px-4 py-3 flex items-center justify-between shrink-0 select-none">
+                  {/* Mock Window Controls */}
+                  <div className="flex items-center gap-1.5 shrink-0">
+                    <span className="w-2.5 h-2.5 rounded-full bg-rose-500/90 shadow-sm shadow-rose-500/10"></span>
+                    <span className="w-2.5 h-2.5 rounded-full bg-amber-500/90 shadow-sm shadow-amber-500/10"></span>
+                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/90 shadow-sm shadow-emerald-500/10"></span>
+                  </div>
+
+                  {/* Mock Browser URL Area */}
+                  <div className="mx-auto max-w-[180px] sm:max-w-[210px] bg-slate-950 border border-slate-800/40 rounded-full py-1 px-4 flex items-center justify-center gap-1 min-w-[140px]">
+                    <span className="text-[9px] text-slate-400 truncate tracking-wide font-mono font-medium leading-none">
+                      {tpl.url.replace("https://", "").replace("/", "")}
+                    </span>
+                  </div>
+
+                  <div className="w-9"></div>
+                </div>
+
+                {/* Simulated Web View Container */}
+                <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-900 border-b border-slate-800 select-none">
+                  <iframe 
+                    src={tpl.url} 
+                    title={`${tpl.name} Website Live Preview Frame`}
+                    className="absolute top-0 left-0 w-[150%] h-[150%] scale-[0.666] origin-top-left border-none pointer-events-none select-none bg-slate-900"
+                    loading="lazy"
+                  />
+                  {/* Overlay blocker layer to preserve parent scrolling & pointer interactions */}
+                  <div className="absolute inset-0 z-10 bg-transparent flex items-center justify-center" />
+
+                  {/* Category / Rank Tags */}
+                  <div className="absolute top-4 left-4 z-20 flex gap-2 pointer-events-none">
+                    <span className="text-[9px] font-extrabold uppercase bg-slate-950/80 backdrop-blur-md border border-slate-800 text-teal-300 px-2.5 py-1 rounded-full shadow-md leading-none">
                       Template {tpl.id}
                     </span>
                     {tpl.isPopular && (
-                      <span className="text-[10px] font-extrabold uppercase bg-teal-500 text-slate-950 px-2.5 py-1 rounded-full shadow-md flex items-center gap-1">
-                        🏆 Most Popular
+                      <span className="text-[9px] font-extrabold uppercase bg-teal-500 text-slate-950 px-2.5 py-1 rounded-full shadow-md flex items-center gap-1 leading-none">
+                        🏆 Popular
                       </span>
                     )}
                   </div>
 
-                  <div className="absolute top-4 right-4 z-10">
-                    <span className="bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 text-[10px] font-bold px-2.5 py-1 rounded-full shadow-sm">
-                      ● Live Preview
+                  {/* Live indicators */}
+                  <div className="absolute bottom-4 right-4 z-20 pointer-events-none">
+                    <span className="inline-flex items-center gap-1.5 bg-teal-500/95 backdrop-blur-md text-slate-950 text-[9px] font-black px-2.5 py-1 rounded-full shadow-md uppercase tracking-wider leading-none">
+                      <span className="w-1.5 h-1.5 rounded-full bg-slate-950 animate-ping"></span>
+                      Live Preview
                     </span>
-                  </div>
-
-                  {/* Glassmorphic device frame container with actual image screenshot */}
-                  <div className="w-full h-full relative overflow-hidden flex items-end justify-center pt-8 bg-slate-950 border-b border-slate-100">
-                    
-                    {/* Fake Browser header */}
-                    <div className="absolute top-0 inset-x-0 h-6 bg-slate-900 border-b border-white/5 px-4 flex items-center justify-between z-10">
-                      <div className="flex gap-1.5">
-                        <span className="w-1.5 h-1.5 rounded-full bg-rose-500/50"></span>
-                        <span className="w-1.5 h-1.5 rounded-full bg-amber-500/50"></span>
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/50"></span>
-                      </div>
-                      <span className="text-[8px] text-slate-500 font-mono tracking-wide">{tpl.url.replace("https://", "")}</span>
-                      <div className="w-6 h-1 bg-white/10 rounded"></div>
-                    </div>
-
-                    {/* Image screenshot */}
-                    <img 
-                      src={tpl.screenshot} 
-                      alt={`${tpl.name} Screenshot`}
-                      referrerPolicy="no-referrer"
-                      className="w-[92%] h-[88%] object-cover object-top rounded-t-lg shadow-xl border-t border-x border-white/10 group-hover:scale-105 transition-transform duration-500"
-                    />
                   </div>
                 </div>
 
-                {/* Info and CTA */}
-                <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
+                {/* Content & View Option */}
+                <div className="p-6 flex-1 flex flex-col justify-between space-y-5 bg-slate-950">
                   
-                  <div className="space-y-2">
-                    {/* Category and PageSpeed Score */}
-                    <div className="flex items-center justify-between text-[10px] font-bold tracking-wider uppercase">
-                      <span className="text-teal-600 bg-teal-50 border border-teal-100/50 px-2 py-0.5 rounded">
-                        {tpl.category} Theme
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between text-[10px] font-bold tracking-wider uppercase leading-none">
+                      <span className="text-teal-300 bg-teal-500/10 border border-teal-500/20 px-2.5 py-1 rounded-full">
+                        {tpl.category} Mode
                       </span>
-                      <span className="text-slate-400 font-mono">
+                      <span className="text-slate-500 font-mono flex items-center gap-1">
                         ⚡ {tpl.speedScore}
                       </span>
                     </div>
 
-                    <h3 className="font-display font-extrabold text-base text-slate-900 group-hover:text-teal-700 transition-colors duration-200">
+                    <h3 className="font-display font-extrabold text-lg text-white group-hover:text-teal-400 transition-colors duration-300 leading-snug">
                       {tpl.name}
                     </h3>
 
-                    <p className="text-xs text-slate-500 leading-relaxed">
+                    <p className="text-xs text-slate-400 leading-relaxed min-h-[48px]">
                       {tpl.description}
                     </p>
                   </div>
 
-                  {/* Features list */}
-                  <div className="space-y-1 bg-slate-50 p-3 rounded-xl border border-slate-200/50">
-                    <span className="text-[10px] uppercase font-bold text-slate-400 block mb-1">Layout Highlights:</span>
+                  {/* Highlights */}
+                  <div className="space-y-1.5 bg-slate-900/40 p-4 rounded-xl border border-slate-900">
+                    <span className="text-[9px] uppercase font-bold text-slate-500 block mb-1">Architecture Highlights:</span>
                     {tpl.features.map((feat, fIdx) => (
-                      <div key={fIdx} className="flex items-center gap-1.5 text-[10px] text-slate-600 font-medium">
-                        <CheckCircle className="w-3.5 h-3.5 text-teal-600 shrink-0" />
-                        <span>{feat}</span>
+                      <div key={fIdx} className="flex items-center gap-2 text-[10px] text-slate-300 font-medium font-sans">
+                        <CheckCircle className="w-3.5 h-3.5 text-teal-400 shrink-0" />
+                        <span className="truncate">{feat}</span>
                       </div>
                     ))}
                   </div>
 
-                  {/* Navigation View Button */}
-                  <div className="pt-2">
+                  <div className="pt-1">
                     <a
                       href={tpl.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full inline-flex items-center justify-center gap-1.5 py-3 bg-slate-900 hover:bg-teal-600 text-white rounded-xl text-xs font-bold transition-all duration-300 hover:scale-101 shadow-sm active:scale-99 group/btn"
+                      className="w-full inline-flex items-center justify-center gap-2 py-3 bg-teal-500 hover:bg-teal-400 text-slate-950 rounded-xl text-xs font-bold transition-all duration-300 hover:scale-[1.01] shadow-md hover:shadow-teal-500/10 active:scale-99 group/btn cursor-pointer"
                     >
-                      <span>View Live Template</span>
-                      <ExternalLink className="w-3.5 h-3.5 text-white/80 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
+                      <span>View Template</span>
+                      <ExternalLink className="w-3.5 h-3.5 text-slate-950 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform duration-200" />
                     </a>
                   </div>
 

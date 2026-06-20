@@ -48,85 +48,12 @@ export default function OurProjects() {
   const [searchTerm, setSearchTerm] = useState("");
   const [activeCategory, setActiveCategory] = useState("All Categories");
 
-  // Project List (using standard authentic Bangladeshi clinician data to build direct trust)
-  const projectsData: Project[] = [
-    {
-      id: 1,
-      doctorName: "Prof. Dr. M. A. Baqui",
-      degrees: "MBBS, MD (Cardiology), FACC (USA), FESC",
-      specialization: "Cardiology",
-      location: "Dhaka",
-      screenshotUrl: cardioImg,
-      demoUrl: "https://drbaqui-cardiology.medprofile.com.bd"
-    },
-    {
-      id: 2,
-      doctorName: "Dr. Nusrat Jahan",
-      degrees: "MBBS, FCPS (Obstetrics & Gynecology), MS (Gynae)",
-      specialization: "Gynecology",
-      location: "Chittagong",
-      screenshotUrl: gynaeImg,
-      demoUrl: "https://drnusrat-gynae.medprofile.com.bd"
-    },
-    {
-      id: 3,
-      doctorName: "Dr. Sabina Yeasmin",
-      degrees: "MBBS, DDV, FCPS (Dermatology)",
-      specialization: "Dermatology",
-      location: "Dhaka",
-      screenshotUrl: dermaImg,
-      demoUrl: "https://drsabina-skin.medprofile.com.bd"
-    },
-    {
-      id: 4,
-      doctorName: "Dr. Syed Tanveer Ahmed",
-      degrees: "MBBS, MS (Orthopedic Surgery)",
-      specialization: "Orthopedics",
-      location: "Sylhet",
-      screenshotUrl: orthoImg,
-      demoUrl: "https://drtanveer-ortho.medprofile.com.bd"
-    },
-    {
-      id: 5,
-      doctorName: "Prof. Dr. Ariful Islam",
-      degrees: "MBBS, FCPS (Pediatrics), MD (Child Health)",
-      specialization: "Pediatrics",
-      location: "Rajshahi",
-      screenshotUrl: childImg,
-      demoUrl: "https://drarifchild.medprofile.com.bd"
-    },
-    {
-      id: 6,
-      doctorName: "Dr. Fahmida Rahman",
-      degrees: "MBBS, MD (Neurology)",
-      specialization: "Neurology",
-      location: "Khulna",
-      screenshotUrl: neuroImg,
-      demoUrl: "https://drfahmida-neuro.medprofile.com.bd"
-    },
-    {
-      id: 7,
-      doctorName: "Dr. S. M. Munir",
-      degrees: "MBBS, FCPS (Internal Medicine), MACP (USA)",
-      specialization: "Medicine",
-      location: "Dhaka",
-      screenshotUrl: medImg,
-      demoUrl: "https://drmunir-medicine.medprofile.com.bd"
-    },
-    {
-      id: 8,
-      doctorName: "Dr. Rehana Parvin",
-      degrees: "MBBS, DGO, MCPS (Obstetrics & Gynecology)",
-      specialization: "Gynecology",
-      location: "Dhaka",
-      screenshotUrl: gynaeImg, // Reusing high fidelity gynae template screenshot
-      demoUrl: "https://drrehana-gynae.medprofile.com.bd"
-    }
-  ];
+  // Project List is intentionally empty as we prepare to launch our live pilot medical profiles
+  const projectsData: Project[] = [];
 
   // Filter Categories
   const categories = [
-    "All Categories",
+    "All Specialities",
     "Cardiology",
     "Medicine",
     "Gynecology",
@@ -301,119 +228,92 @@ export default function OurProjects() {
       </section>
 
       {/* ━━━━━━━━━━━━━━━━━━━━━━ PROJECT SHOWCASE GRID ━━━━━━━━━━━━━━━━━━━━━━ */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 bg-white relative overflow-hidden">
+        {/* Subtle decorative background gradients */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-80 h-80 bg-teal-500/5 rounded-full filter blur-[120px] pointer-events-none"></div>
+
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="mb-10 text-center lg:text-left">
-            <span className="text-slate-500 font-bold ml-1 text-sm tracking-wide">
-              Showing {filteredProjects.length === projectsData.length ? "all" : filteredProjects.length} completed projects
-            </span>
-          </div>
+          {/* Main Coming Soon Container */}
+          <div className="relative bg-slate-950 text-white rounded-3xl p-8 sm:p-12 md:p-16 border border-slate-800 shadow-2xl overflow-hidden hover:shadow-[0_20px_50px_rgba(20,184,166,0.1)] transition-all duration-500 group">
+            
+            {/* Glowing background ring */}
+            <div className="absolute top-0 right-0 w-96 h-96 bg-teal-500/10 rounded-full filter blur-[100px] pointer-events-none group-hover:bg-teal-500/15 transition-all duration-500"></div>
+            <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-sky-500/10 rounded-full filter blur-[100px] pointer-events-none"></div>
 
-          {filteredProjects.length === 0 ? (
-            <div className="text-center py-20 max-w-md mx-auto">
-              <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4 text-slate-400">
-                <Search className="w-7 h-7" />
+            <div className="relative z-10 max-w-3xl mx-auto text-center space-y-8">
+              
+              {/* Top active tag */}
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/5 border border-white/10 text-teal-400 rounded-full text-[10px] font-extrabold uppercase tracking-widest leading-none">
+                <span className="w-1.5 h-1.5 rounded-full bg-teal-400 animate-pulse"></span>
+                <span>Active Onboarding Phase</span>
               </div>
-              <h3 className="font-display font-bold text-lg text-slate-900">No projects found</h3>
-              <p className="text-slate-500 text-xs mt-1">Try resetting your search query or choosing another specialty category filter.</p>
-              <button
-                onClick={() => { setSearchTerm(""); setActiveCategory("All Categories"); }}
-                className="mt-5 text-xs font-bold text-teal-600 bg-teal-50 px-4 py-2 rounded-lg hover:bg-teal-100 transition-colors"
-              >
-                Reset Filters
-              </button>
+
+              {/* Title & Request Message */}
+              <div className="space-y-4">
+                <h3 className="font-display font-black text-2xl sm:text-3xl lg:text-4xl text-white tracking-tight leading-tight">
+                  Portfolio Launch Coming Soon
+                </h3>
+                <p className="text-slate-300 text-base sm:text-lg font-normal max-w-2xl mx-auto leading-relaxed">
+                  Real client projects will be showcased here as we continue helping doctors build their digital presence.
+                </p>
+              </div>
+
+              {/* Visual Pipeline Showcase block */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-left pt-4">
+                
+                {/* Pipeline step 1 */}
+                <div className="h-full bg-white/5 border border-white/10 rounded-2xl p-5 hover:border-teal-500/30 transition-all duration-300">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-[10px] font-bold text-teal-400 font-mono">PHASE 01</span>
+                    <span className="text-[9px] bg-teal-500/20 text-teal-300 px-2.5 py-0.5 rounded font-extrabold uppercase">Complete</span>
+                  </div>
+                  <h4 className="font-display font-bold text-xs text-white uppercase tracking-wider">Template Selection</h4>
+                  <p className="text-[11px] text-slate-400 mt-1 leading-relaxed">6 premium medical layout canvases successfully engineered and live for demo testing.</p>
+                </div>
+
+                {/* Pipeline step 2 */}
+                <div className="h-full bg-white/5 border border-white/10 rounded-2xl p-5 hover:border-teal-500/30 transition-all duration-300">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-[10px] font-bold text-teal-400 font-mono">PHASE 02</span>
+                    <span className="text-[9px] bg-teal-500/20 text-teal-300 px-2.5 py-0.5 rounded font-extrabold uppercase animate-pulse">Active</span>
+                  </div>
+                  <h4 className="font-display font-bold text-xs text-white uppercase tracking-wider">Client Onboarding</h4>
+                  <p className="text-[11px] text-slate-400 mt-1 leading-relaxed">Structuring clinical portfolios, medical resumes, and doctor credentials for pilot doctors.</p>
+                </div>
+
+                {/* Pipeline step 3 */}
+                <div className="h-full bg-white/5 border border-white/10 rounded-2xl p-5 hover:border-teal-500/30 transition-all duration-300">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-[10px] font-bold text-slate-500 font-mono">PHASE 03</span>
+                    <span className="text-[9px] bg-white/5 text-slate-400 px-2 py-0.5 rounded font-extrabold uppercase">Queued</span>
+                  </div>
+                  <h4 className="font-display font-bold text-xs text-white uppercase tracking-wider">Live Deployments</h4>
+                  <p className="text-[11px] text-slate-400 mt-1 leading-relaxed">Registering web domains (.com.bd / .com) and indexing clinical content directly on search engines.</p>
+                </div>
+
+              </div>
+
+              {/* Pilot Clinician CTA */}
+              <div className="pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-6 text-left">
+                <div>
+                  <h4 className="font-display font-black text-sm text-white">Join Our Exclusive Cohort</h4>
+                  <p className="text-slate-400 text-xs mt-0.5">Be among the first doctors in Bangladesh to launch a live profile with MedProfile.</p>
+                </div>
+                <a
+                  href="https://wa.me/8801902646475"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-teal-500 hover:bg-teal-400 text-slate-950 text-xs font-bold uppercase rounded-full transition-all duration-200 shadow-md active:scale-98"
+                >
+                  <span>Launch Your Site</span>
+                  <ArrowUpRight className="w-3.5 h-3.5" />
+                </a>
+              </div>
+
             </div>
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <AnimatePresence mode="popLayout">
-                {filteredProjects.map((project, index) => (
-                  <motion.div
-                    key={project.id}
-                    layout
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.95 }}
-                    transition={{ duration: 0.4 }}
-                    className="group flex flex-col bg-slate-50/50 border border-slate-200/70 rounded-3xl overflow-hidden hover:bg-white hover:border-slate-250 hover:shadow-2xl hover:shadow-slate-200/50 transition-all duration-300"
-                  >
-                    
-                    {/* Website 16:9 Screen Section */}
-                    <div className="relative aspect-[16/9] w-full overflow-hidden bg-slate-100 border-b border-slate-200/50">
-                      <img 
-                        src={project.screenshotUrl} 
-                        alt={`${project.doctorName} website preview screenshot`}
-                        className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-103 group-hover:translate-y-[-1%]"
-                        referrerPolicy="no-referrer"
-                      />
-                      
-                      {/* Dark overlay & live visit visual on hover */}
-                      <div className="absolute inset-0 bg-slate-950/40 backdrop-blur-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <a 
-                          href={project.demoUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="px-5 py-3.5 bg-white text-slate-950 rounded-2xl text-xs font-bold tracking-wide flex items-center gap-1.5 shadow-xl hover:bg-slate-950 hover:text-white transition-all duration-200 hover:scale-105"
-                        >
-                          <span>View Live Site</span>
-                          <ExternalLink className="w-3.5 h-3.5" />
-                        </a>
-                      </div>
 
-                      {/* Floating Location Tag */}
-                      <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-xs px-2.5 py-1 rounded-lg shadow-sm border border-slate-200/40 flex items-center gap-1">
-                        <MapPin className="w-3 h-3 text-slate-500 fill-slate-100" />
-                        <span className="text-[10px] font-bold text-slate-700">{project.location}</span>
-                      </div>
-
-                      {/* Floating Live Indicator Badge */}
-                      <div className="absolute top-3 right-3 bg-teal-500 border border-teal-400 px-2.5 py-1 rounded-lg flex items-center gap-1.5 shadow-sm text-white">
-                        <span className="w-1.5 h-1.5 rounded-full bg-white animate-ping"></span>
-                        <span className="text-[9px] font-extrabold uppercase tracking-widest leading-none">Live Portfolio</span>
-                      </div>
-                    </div>
-
-                    {/* Card Description Details */}
-                    <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
-                      <div className="space-y-2">
-                        
-                        {/* Specialization mini Badge */}
-                        <span className="inline-flex items-center bg-teal-50 text-teal-800 border border-teal-100 px-2.5 py-0.5 rounded-md text-[9px] font-extrabold uppercase tracking-wider">
-                          {project.specialization}
-                        </span>
-
-                        {/* Title & Degrees */}
-                        <div>
-                          <h3 className="font-display font-extrabold text-lg text-slate-900 group-hover:text-teal-600 transition-colors leading-snug">
-                            {project.doctorName}
-                          </h3>
-                          <p className="text-xs text-slate-500 font-semibold line-clamp-1 mt-0.5" title={project.degrees}>
-                            {project.degrees}
-                          </p>
-                        </div>
-
-                      </div>
-
-                      {/* Footer button inside card */}
-                      <div className="pt-2">
-                        <a
-                          href={project.demoUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="w-full py-3 px-4 bg-white border border-slate-250 text-slate-700 hover:text-white hover:bg-slate-950 hover:border-slate-950 rounded-xl text-xs font-bold leading-normal transition-all duration-200 flex items-center justify-center gap-1.5 shadow-sm"
-                        >
-                          <span>Visit Live Website</span>
-                          <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                        </a>
-                      </div>
-
-                    </div>
-
-                  </motion.div>
-                ))}
-              </AnimatePresence>
-            </div>
-          )}
+          </div>
 
         </div>
       </section>
