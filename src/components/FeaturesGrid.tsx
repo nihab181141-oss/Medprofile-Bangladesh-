@@ -87,7 +87,7 @@ export default function FeaturesGrid() {
   };
 
   return (
-    <section id="features" className="py-24 md:py-32 bg-white relative overflow-hidden">
+    <section id="features" className="py-28 md:py-40 bg-white relative overflow-hidden">
       {/* Absolute faint top-right glow */}
       <div className="absolute top-0 right-0 w-80 h-80 bg-teal-50/50 rounded-full filter blur-[100px] pointer-events-none -z-10"></div>
 
@@ -123,10 +123,9 @@ export default function FeaturesGrid() {
                 whileHover={{ 
                   y: -5,
                   scale: 1.02,
-                  boxShadow: "0 15px 30px -10px rgba(15, 118, 110, 0.06)",
-                  borderColor: "rgba(13, 148, 136, 0.25)"
+                  boxShadow: "0 25px 50px -12px rgba(15, 23, 42, 0.08)"
                 }}
-                className="bg-slate-50/40 p-6 rounded-2xl border border-slate-200 hover:bg-white transition-all duration-300 flex flex-col justify-between"
+                className="bg-white p-6 rounded-2xl shadow-[0_15px_40px_rgba(15,23,42,0.035)] transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="w-10 h-10 rounded-xl bg-teal-50 text-teal-700 flex items-center justify-center mb-5 border border-teal-150/40 transition-transform duration-300 group-hover:scale-105">
@@ -138,9 +137,6 @@ export default function FeaturesGrid() {
                   <p className="text-slate-500 text-[11px] sm:text-xs leading-relaxed text-left font-medium">
                     {item.desc}
                   </p>
-                </div>
-                <div className="mt-6 pt-3 border-t border-slate-100 text-[9px] font-extrabold text-teal-600 uppercase tracking-widest select-none">
-                  Core Spec
                 </div>
               </motion.div>
             );

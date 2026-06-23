@@ -123,6 +123,22 @@
         ]
       }
     </script>
+    <!-- Prevent cross-origin iframe or browser extension errors from polluting parent window -->
+    <script>
+      window.onerror = function (message, source, lineno, colno, error) {
+        if (message === "Script error." || (typeof message === "string" && message.includes("Script error"))) {
+          console.warn("Muted cross-origin iframe script error:", message);
+          return true; // Suppresses default error propagation
+        }
+        return false;
+      };
+      window.addEventListener("error", function (e) {
+        if (e.message === "Script error." || (typeof e.message === "string" && e.message.includes("Script error"))) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+      }, true);
+    </script>
   </head>
   <body>
     <div id="root"></div>

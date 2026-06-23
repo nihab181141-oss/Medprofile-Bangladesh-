@@ -13,7 +13,7 @@ export default function ProjectsIntroBlock({ setCurrentView }: ProjectsIntroBloc
   };
 
   return (
-    <section className="py-20 md:py-28 bg-gradient-to-b from-slate-50 via-white to-slate-50/50 relative overflow-hidden">
+    <section className="py-28 md:py-40 bg-gradient-to-b from-slate-50 via-white to-slate-50/50 relative overflow-hidden">
       {/* Decorative subtle abstract elements */}
       <div className="absolute top-1/4 left-0 w-80 h-80 bg-teal-500/5 rounded-full filter blur-3xl -z-10 pointer-events-none"></div>
       <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-sky-500/5 rounded-full filter blur-3xl -z-10 pointer-events-none"></div>
@@ -48,7 +48,7 @@ export default function ProjectsIntroBlock({ setCurrentView }: ProjectsIntroBloc
                 <p className="hidden sm:block">
                   If you are planning to build your own professional website, you can explore our projects to see real examples and understand how your website will look.
                 </p>
-                <p className="text-teal-400 font-medium">
+                <p className="text-slate-200 font-medium">
                   You can also check the status of live doctor websites and see how we transform medical professionals into a strong online presence.
                 </p>
               </div>

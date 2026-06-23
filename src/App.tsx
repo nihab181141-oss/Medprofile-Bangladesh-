@@ -266,7 +266,7 @@ export default function App() {
               </div>
 
               {/* Huge Display Typography */}
-              <h1 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-slate-900 tracking-tight leading-[1.08]">
+              <h1 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-slate-900 tracking-tight leading-[1.32]">
                 Bangladesh's Trusted Platform for{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 via-teal-700 to-teal-500 block py-1">
                   Doctor Digital Identity
@@ -430,22 +430,6 @@ export default function App() {
                     <span className="text-xs font-bold text-slate-800 leading-none block mt-0.5">Real-time Verified</span>
                   </div>
                 </div>
-
-                {/* Right Floating Phone Scheduler */}
-                <a 
-                  href="https://wa.me/8801902646475"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="absolute -top-6 -right-6 bg-white border border-slate-250 p-3 rounded-2xl shadow-xl flex items-center gap-2.5 max-w-[170px] transition-transform duration-300 hover:translate-y-1 z-20 hidden sm:flex cursor-pointer hover:shadow-emerald-500/10 hover:border-emerald-250"
-                >
-                  <div className="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 animate-pulse">
-                    <Phone className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <span className="text-[9px] uppercase font-bold tracking-widest text-slate-400 block tracking-wider">WhatsApp Hotline</span>
-                    <span className="text-[11px] font-extrabold text-slate-850 leading-tight block">+8801902646475</span>
-                  </div>
-                </a>
 
               </div>
             </motion.div>

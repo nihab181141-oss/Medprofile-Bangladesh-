@@ -207,148 +207,8 @@ export default function ContactAndGallery() {
 
   return (
     <>
-      {/* SECTION 1: WEBSITE TEMPLATES GALLERY */}
-      <section id="demo-gallery" className="py-24 md:py-32 bg-gradient-to-b from-white via-slate-50/50 to-white relative overflow-hidden scroll-mt-20">
-        {/* Soft Background Accent blur circles */}
-        <div className="absolute top-1/4 left-1/10 w-96 h-96 bg-cyan-100/30 rounded-full filter blur-[120px] -z-10"></div>
-        <div className="absolute bottom-1/3 right-1/10 w-[500px] h-[500px] bg-teal-50/40 rounded-full filter blur-[150px] -z-10"></div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          
-          {/* Headline block */}
-          <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-3 py-1 bg-teal-50 border border-teal-100 text-teal-800 rounded-full text-xs font-bold uppercase tracking-wider mb-4"
-            >
-              <Sparkles className="w-3.5 h-3.5 text-teal-600 animate-pulse" />
-              Verified LIVE SHOWCASE
-            </motion.div>
-            
-            <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="font-display font-extrabold text-3xl md:text-5xl text-slate-900 tracking-tight leading-tight"
-            >
-              Explore Our Premium <span className="text-teal-600">Website Templates</span>
-            </motion.h2>
-            
-            <motion.p 
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="mt-4 text-slate-500 text-sm md:text-base leading-relaxed font-semibold max-w-xl mx-auto"
-            >
-              Choose from our professionally designed healthcare website templates. Designed meticulously with zero dependency speed loads and compliant layouts.
-            </motion.p>
-          </div>
-
-          {/* Grid Layout containing 4 Premium templates */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {templates.map((tpl, index) => (
-              <motion.div
-                key={tpl.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7, delay: index * 0.1 }}
-                whileHover={{ y: -8 }}
-                className="group relative bg-white border border-slate-200/90 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl hover:border-teal-400/50 transition-all duration-300 flex flex-col justify-between"
-              >
-                {/* Most Popular Badge overlay */}
-                {tpl.isPopular && (
-                  <div className="absolute top-4 left-4 z-20 bg-gradient-to-r from-teal-600 to-teal-500 text-white font-display text-[9px] font-black tracking-widest uppercase px-3 py-1 rounded-full shadow-lg flex items-center gap-1">
-                    <Award className="w-3 h-3 text-white" /> Most Popular
-                  </div>
-                )}
-
-                {/* Simulated Glassmorphism Web Frame with custom CSS layouts */}
-                <div className="relative aspect-[3/2.2] bg-slate-950 overflow-hidden border-b border-slate-100 flex items-center justify-center p-1.5 group-hover:scale-102 transition-transform duration-300">
-                  <div className="absolute inset-0 bg-slate-900/40 backdrop-blur-[1px] -z-10"></div>
-                  
-                  {/* Subtle decorative browser bar dots */}
-                  <div className="absolute top-2 right-4 flex gap-1 z-10">
-                    <span className="w-1.5 h-1.5 rounded-full bg-white/20"></span>
-                    <span className="w-1.5 h-1.5 rounded-full bg-white/20"></span>
-                    <span className="w-1.5 h-1.5 rounded-full bg-white/20"></span>
-                  </div>
-
-                  {/* Render the specific Template mockup structure */}
-                  {tpl.previewBlocks}
-                </div>
-
-                {/* Content Block of the design layout */}
-                <div className="p-6 flex-1 flex flex-col justify-between">
-                  <div>
-                    {/* Tiny headers */}
-                    <div className="flex items-center justify-between gap-2 mb-2">
-                      <span className="text-[10px] uppercase tracking-wider font-extrabold text-teal-600">
-                        Template {tpl.id}
-                      </span>
-                      <span className="text-[9px] font-mono text-slate-400 font-bold bg-slate-50 px-2 py-0.5 rounded border border-slate-100">
-                        {tpl.speedScore}
-                      </span>
-                    </div>
-
-                    <h3 className="text-base font-extrabold text-slate-850 tracking-tight group-hover:text-teal-700 transition-colors duration-200">
-                      {tpl.name}
-                    </h3>
-                    
-                    <p className="text-[11px] text-slate-500 font-medium mt-1">
-                      {tpl.category}
-                    </p>
-
-                    {/* Features checklist inside cards */}
-                    <div className="mt-4 pt-3 border-t border-slate-100 flex items-center gap-2 text-[10px] text-slate-650 font-bold select-none">
-                      <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full"></div>
-                      <span>{tpl.bmdcReady}</span>
-                      <span className="text-slate-300">|</span>
-                      <span>100% Mobile Native</span>
-                    </div>
-                  </div>
-
-                  {/* View Live Demo Button */}
-                  <div className="mt-6 pt-1">
-                    <a
-                      href={tpl.url}
-                      target="_blank"
-                      referrerPolicy="no-referrer"
-                      rel="noopener noreferrer"
-                      className="w-full py-3.5 px-4 bg-slate-50 group-hover:bg-teal-600 border border-slate-200 group-hover:border-teal-500 rounded-2xl flex items-center justify-center gap-2 font-display font-extrabold text-xs uppercase tracking-widest text-slate-700 group-hover:text-white transition-all duration-300 active:scale-98 shadow-sm group-hover:shadow-lg group-hover:shadow-teal-500/10"
-                    >
-                      <span>View Live Demo</span>
-                      <ExternalLink className="w-3.5 h-3.5 transition-transform duration-250 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                    </a>
-                  </div>
-                </div>
-
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Core Trust statement bottom */}
-          <motion.div 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-16 text-center text-xs text-slate-400 font-medium flex items-center justify-center gap-1.5"
-          >
-            <ShieldCheck className="w-4 h-4 text-teal-600 shrink-0" />
-            <span>All premium website templates comply strictly with Bangladesh Medical & Dental Council (BMDC) digital display norms.</span>
-          </motion.div>
-
-        </div>
-      </section>
-
       {/* SECTION 2: GET IN TOUCH CONTACT SECTION */}
-      <section id="contact-us" className="py-24 md:py-32 bg-white relative overflow-hidden border-t border-slate-100 scroll-mt-20">
+      <section id="contact-us" className="py-28 md:py-40 bg-white relative overflow-hidden border-t border-slate-100 scroll-mt-20">
         
         {/* Soft abstract floating dot backdrops */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-teal-100/10 rounded-full filter blur-[150px] -z-10"></div>
@@ -399,7 +259,7 @@ export default function ContactAndGallery() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="md:col-span-1 group relative bg-white border-2 border-emerald-500/80 rounded-3xl p-8 flex flex-col justify-between shadow-lg shadow-emerald-500/5 hover:shadow-2xl hover:shadow-emerald-500/10 transition-all duration-300"
+              className="md:col-span-1 group relative bg-white rounded-2xl p-8 flex flex-col justify-between shadow-[0_15px_45px_rgba(16,185,129,0.06)] hover:shadow-[0_25px_50px_rgba(16,185,129,0.12)] transition-all duration-300"
             >
               {/* Active Badge overlay */}
               <div className="absolute top-4 right-4 bg-emerald-50 text-emerald-800 border border-emerald-100 font-mono text-[9px] font-extrabold tracking-widest uppercase py-1 px-3 rounded-full flex items-center gap-1 select-none">
@@ -451,7 +311,7 @@ export default function ContactAndGallery() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="md:col-span-1 group relative bg-slate-50/50 border border-slate-200 rounded-3xl p-8 flex flex-col justify-between hover:border-slate-300 transition-all duration-300"
+              className="md:col-span-1 group relative bg-white rounded-2xl p-8 flex flex-col justify-between shadow-[0_15px_45px_rgba(15,23,42,0.03)] hover:shadow-[0_25px_50px_rgba(15,23,42,0.06)] transition-all duration-300"
             >
               {/* Coming Soon badge */}
               <div className="absolute top-4 right-4 bg-slate-100 text-slate-500 border border-slate-200 text-[9px] font-bold tracking-widest uppercase py-1 px-3 rounded-full select-none">
@@ -494,7 +354,7 @@ export default function ContactAndGallery() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="md:col-span-1 group relative bg-slate-50/50 border border-slate-200 rounded-3xl p-8 flex flex-col justify-between hover:border-slate-300 transition-all duration-300"
+              className="md:col-span-1 group relative bg-white rounded-2xl p-8 flex flex-col justify-between shadow-[0_15px_45px_rgba(15,23,42,0.03)] hover:shadow-[0_25px_50px_rgba(15,23,42,0.06)] transition-all duration-300"
             >
               {/* Coming Soon badge */}
               <div className="absolute top-4 right-4 bg-slate-100 text-slate-500 border border-slate-200 text-[9px] font-bold tracking-widest uppercase py-1 px-3 rounded-full select-none">

@@ -33,7 +33,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section id="faq-section" className="py-24 md:py-32 bg-slate-50/40 relative overflow-hidden">
+    <section id="faq-section" className="py-28 md:py-40 bg-slate-50/40 relative overflow-hidden">
       {/* Absolute decorative glow */}
       <div className="absolute bottom-0 left-1/3 w-80 h-80 bg-teal-500/5 rounded-full filter blur-[100px] pointer-events-none -z-10"></div>
 

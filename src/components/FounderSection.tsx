@@ -25,7 +25,7 @@ export default function FounderSection() {
   ];
 
   return (
-    <section id="founder-section" className="py-24 md:py-32 bg-slate-50/30 border-t border-slate-200/45 scroll-mt-6 relative overflow-hidden">
+    <section id="founder-section" className="py-28 md:py-40 bg-slate-50/30 border-t border-slate-200/45 scroll-mt-6 relative overflow-hidden">
       {/* Background ambient accents */}
       <div className="absolute top-1/4 right-[10%] w-[350px] h-[350px] bg-teal-200/10 rounded-full filter blur-[100px] -z-10 pointer-events-none"></div>
       <div className="absolute bottom-1/4 left-[10%] w-[350px] h-[350px] bg-sky-200/10 rounded-full filter blur-[100px] -z-10 pointer-events-none"></div>
@@ -73,7 +73,7 @@ export default function FounderSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.7, ease: "easeOut" }}
-            className="relative bg-white/75 backdrop-blur-md border border-slate-200/80 rounded-3xl p-8 sm:p-12 shadow-xl shadow-slate-100/40 group overflow-hidden text-center"
+            className="relative bg-white/80 backdrop-blur-md rounded-2xl p-8 sm:p-12 shadow-[0_20px_50px_rgba(15,23,42,0.04)] group overflow-hidden text-center"
           >
             {/* Styled border animation effect on hover */}
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-teal-500 via-sky-500 to-teal-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>

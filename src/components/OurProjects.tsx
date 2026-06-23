@@ -388,7 +388,7 @@ export default function OurProjects() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
             {/* Bento Card 1 */}
-            <div className="bg-white border border-slate-200/60 p-8 rounded-3xl space-y-4 hover:border-slate-300 hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+            <div className="bg-white p-8 rounded-2xl shadow-[0_15px_45px_rgba(15,23,42,0.04)] hover:shadow-[0_25px_50px_rgba(15,23,42,0.08)] hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-between">
               <div className="space-y-4">
                 <div className="w-12 h-12 rounded-2xl bg-teal-50 flex items-center justify-center text-teal-600">
                   <Laptop className="w-6 h-6" />
@@ -401,7 +401,7 @@ export default function OurProjects() {
             </div>
 
             {/* Bento Card 2 */}
-            <div className="bg-white border border-slate-200/60 p-8 rounded-3xl space-y-4 hover:border-slate-300 hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+            <div className="bg-white p-8 rounded-2xl shadow-[0_15px_45px_rgba(15,23,42,0.04)] hover:shadow-[0_25px_50px_rgba(15,23,42,0.08)] hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-between">
               <div className="space-y-4">
                 <div className="w-12 h-12 rounded-2xl bg-teal-50 flex items-center justify-center text-teal-600">
                   <Globe className="w-6 h-6" />
@@ -414,7 +414,7 @@ export default function OurProjects() {
             </div>
 
             {/* Bento Card 3 */}
-            <div className="bg-white border border-slate-200/60 p-8 rounded-3xl space-y-4 hover:border-slate-300 hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+            <div className="bg-white p-8 rounded-2xl shadow-[0_15px_45px_rgba(15,23,42,0.04)] hover:shadow-[0_25px_50px_rgba(15,23,42,0.08)] hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-between">
               <div className="space-y-4">
                 <div className="w-12 h-12 rounded-2xl bg-teal-50 flex items-center justify-center text-teal-600">
                   <Stethoscope className="w-6 h-6" />
@@ -427,7 +427,7 @@ export default function OurProjects() {
             </div>
 
             {/* Bento Card 4 */}
-            <div className="bg-white border border-slate-200/60 p-8 rounded-3xl space-y-4 hover:border-slate-300 hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+            <div className="bg-white p-8 rounded-2xl shadow-[0_15px_45px_rgba(15,23,42,0.04)] hover:shadow-[0_25px_50px_rgba(15,23,42,0.08)] hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-between">
               <div className="space-y-4">
                 <div className="w-12 h-12 rounded-2xl bg-teal-50 flex items-center justify-center text-teal-600">
                   <HeartHandshake className="w-6 h-6" />
@@ -440,7 +440,7 @@ export default function OurProjects() {
             </div>
 
             {/* Bento Card 5 */}
-            <div className="bg-white border border-slate-200/60 p-8 rounded-3xl space-y-4 hover:border-slate-300 hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+            <div className="bg-white p-8 rounded-2xl shadow-[0_15px_45px_rgba(15,23,42,0.04)] hover:shadow-[0_25px_50px_rgba(15,23,42,0.08)] hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-between">
               <div className="space-y-4">
                 <div className="w-12 h-12 rounded-2xl bg-teal-50 flex items-center justify-center text-teal-600">
                   <Zap className="w-6 h-6" />
@@ -453,7 +453,7 @@ export default function OurProjects() {
             </div>
 
             {/* Bento Card 6 */}
-            <div className="bg-white border border-slate-200/60 p-8 rounded-3xl space-y-4 hover:border-slate-300 hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+            <div className="bg-white p-8 rounded-2xl shadow-[0_15px_45px_rgba(15,23,42,0.04)] hover:shadow-[0_25px_50px_rgba(15,23,42,0.08)] hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-between">
               <div className="space-y-4">
                 <div className="w-12 h-12 rounded-2xl bg-teal-50 flex items-center justify-center text-teal-600">
                   <CheckCircle2 className="w-6 h-6" />

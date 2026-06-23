@@ -36,7 +36,7 @@ export default function PricingSection() {
   };
 
   return (
-    <section id="pricing-section" className="py-24 md:py-32 bg-white border-b border-slate-100 relative overflow-hidden">
+    <section id="pricing-section" className="py-28 md:py-40 bg-white border-b border-slate-100 relative overflow-hidden">
       {/* Soft gradient background blob */}
       <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-teal-55/40 rounded-full filter blur-[130px] pointer-events-none -z-10"></div>
 
@@ -68,8 +68,8 @@ export default function PricingSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            whileHover={{ y: -4, boxShadow: "0 25px 50px -12px rgba(15, 23, 42, 0.08)" }}
-            className="lg:col-span-6 bg-white border-2 border-slate-900 rounded-3xl p-8 md:p-10 relative flex flex-col justify-between transition-all duration-300"
+            whileHover={{ y: -4, boxShadow: "0 25px 60px -12px rgba(15, 23, 42, 0.08)" }}
+            className="lg:col-span-6 bg-white rounded-2xl p-8 md:p-10 relative flex flex-col justify-between shadow-[0_15px_45px_rgba(15,23,42,0.04)] hover:shadow-[0_25px_60px_rgba(15,23,42,0.08)] transition-all duration-300"
           >
             <div className="absolute top-0 right-10 transform -translate-y-1/2 bg-slate-900 text-white font-mono text-[10px] font-extrabold tracking-widest uppercase py-1.5 px-4 rounded-full">
               Standard Plan
@@ -126,8 +126,8 @@ export default function PricingSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            whileHover={{ y: -4, boxShadow: "0 25px 50px -12px rgba(15, 118, 110, 0.04)" }}
-            className="lg:col-span-6 bg-slate-50/50 border border-slate-200/80 rounded-3xl p-8 md:p-10 flex flex-col justify-between transition-all duration-300"
+            whileHover={{ y: -4, boxShadow: "0 25px 60px -12px rgba(15, 23, 42, 0.08)" }}
+            className="lg:col-span-6 bg-white rounded-2xl p-8 md:p-10 flex flex-col justify-between shadow-[0_15px_45px_rgba(15,23,42,0.04)] hover:shadow-[0_25px_60px_rgba(15,23,42,0.08)] transition-all duration-300"
           >
             <div>
               <div className="flex items-center gap-1.5 bg-teal-50 text-teal-800 text-[10px] font-bold tracking-wide uppercase px-3 py-1 rounded-full border border-teal-100 w-fit mb-5">

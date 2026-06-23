@@ -179,7 +179,14 @@ export default function InteractiveProfileBuilder() {
         body: JSON.stringify(inputs)
       });
       
-      const data = await res.json();
+      const responseText = await res.text();
+      let data: any;
+      try {
+        data = JSON.parse(responseText);
+      } catch (jsonErr) {
+        data = { error: responseText || "Unknown server response format" };
+      }
+
       if (res.ok) {
         setAiProfile(data);
       } else {

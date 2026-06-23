@@ -61,7 +61,7 @@ export default function WhyChoose() {
   };
 
   return (
-    <section id="why-us" className="py-24 md:py-32 bg-slate-50/50 border-y border-slate-200/50 relative overflow-hidden">
+    <section id="why-us" className="py-28 md:py-40 bg-slate-50/50 border-y border-slate-200/50 relative overflow-hidden">
       {/* Background soft blob */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-teal-100/10 rounded-full filter blur-[120px] -z-10"></div>
 
@@ -103,23 +103,19 @@ export default function WhyChoose() {
                 variants={cardVariants}
                 whileHover={{ 
                   y: -6, 
-                  boxShadow: "0 20px 40px -15px rgba(15, 118, 110, 0.08)",
-                  borderColor: "rgba(13, 148, 136, 0.3)"
+                  boxShadow: "0 25px 50px -12px rgba(15, 23, 42, 0.08)"
                 }}
-                className="bg-white p-7 md:p-9 rounded-3xl border border-slate-200/70 shadow-sm transition-all duration-300 group flex flex-col justify-between relative overflow-hidden"
+                className="bg-white p-7 md:p-9 rounded-2xl shadow-[0_15px_45px_rgba(15,23,42,0.04)] transition-all duration-300 group flex flex-col justify-between relative overflow-hidden"
               >
                 {/* Subtle shine accent on hover */}
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-teal-500/0 via-teal-500/75 to-teal-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
                 <div>
                   {/* Top Header Card */}
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="p-3 bg-teal-50 group-hover:bg-teal-100 rounded-2xl transition-colors duration-300">
+                  <div className="mb-6">
+                    <div className="p-3 bg-teal-50 group-hover:bg-teal-100 rounded-2xl transition-colors duration-300 w-fit">
                       <Icon className="w-6 h-6 text-teal-700" />
                     </div>
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-teal-700 bg-teal-50/70 px-3 py-1 rounded-full border border-teal-100/60 select-none">
-                      {pt.badge}
-                    </span>
                   </div>
 
                   {/* Title and Body */}
@@ -129,11 +125,6 @@ export default function WhyChoose() {
                   <p className="mt-3 text-slate-500 text-xs sm:text-sm leading-relaxed text-left font-medium">
                     {pt.desc}
                   </p>
-                </div>
-
-                <div className="mt-8 pt-5 border-t border-slate-100 flex items-center justify-between text-xs text-teal-600 group-hover:text-teal-800 font-bold tracking-wide">
-                  <span className="opacity-90 group-hover:opacity-100">Authorized Clinical Feature</span>
-                  <ArrowUpRight className="w-4 h-4 opacity-50 group-hover:opacity-100 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200" />
                 </div>
               </motion.div>
             );

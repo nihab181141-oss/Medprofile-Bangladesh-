@@ -13,12 +13,12 @@ export default function TemplatesIntroBlock({ setCurrentView }: TemplatesIntroBl
   };
 
   return (
-    <section className="py-20 md:py-24 bg-gradient-to-b from-white to-slate-50 relative overflow-hidden">
+    <section className="py-28 md:py-40 bg-gradient-to-b from-white to-slate-50 relative overflow-hidden">
       {/* Subtle light background patterns */}
       <div className="absolute top-1/2 left-10 w-72 h-72 bg-emerald-500/5 rounded-full filter blur-3xl pointer-events-none"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white border border-slate-200/90 rounded-3xl p-8 sm:p-12 shadow-xl hover:shadow-2xl transition-all duration-500 relative overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="bg-white rounded-2xl p-8 sm:p-12 shadow-[0_20px_50px_rgba(15,23,42,0.045)] hover:shadow-[0_25px_60px_rgba(15,23,42,0.08)] transition-all duration-500 relative overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           {/* Decorative Corner Ribbon */}
           <div className="absolute top-0 right-0 w-32 h-32 bg-teal-500/5 rounded-bl-full pointer-events-none"></div>
@@ -64,7 +64,7 @@ export default function TemplatesIntroBlock({ setCurrentView }: TemplatesIntroBl
             {/* Mock layout card 1 */}
             <div 
               onClick={handleNavigateToTemplates}
-              className="bg-slate-50 border border-slate-200/70 p-5 rounded-2xl hover:border-teal-500/40 transition-all duration-300 cursor-pointer group flex flex-col justify-between h-40"
+              className="bg-white p-5 rounded-2xl shadow-[0_10px_30px_rgba(15,23,42,0.03)] hover:shadow-[0_15px_35px_rgba(15,23,42,0.06)] hover:scale-[1.01] transition-all duration-300 cursor-pointer group flex flex-col justify-between h-40"
             >
               <div className="flex justify-between items-start">
                 <div className="w-8 h-8 rounded-lg bg-teal-50 border border-teal-100 text-teal-600 flex items-center justify-center font-bold text-xs">
@@ -81,7 +81,7 @@ export default function TemplatesIntroBlock({ setCurrentView }: TemplatesIntroBl
             {/* Mock layout card 2 */}
             <div 
               onClick={handleNavigateToTemplates}
-              className="bg-slate-50 border border-slate-200/70 p-5 rounded-2xl hover:border-teal-500/40 transition-all duration-300 cursor-pointer group flex flex-col justify-between h-40"
+              className="bg-white p-5 rounded-2xl shadow-[0_10px_30px_rgba(15,23,42,0.03)] hover:shadow-[0_15px_35px_rgba(15,23,42,0.06)] hover:scale-[1.01] transition-all duration-300 cursor-pointer group flex flex-col justify-between h-40"
             >
               <div className="flex justify-between items-start">
                 <div className="w-8 h-8 rounded-lg bg-sky-50 border border-sky-100 text-sky-600 flex items-center justify-center font-bold text-xs">
