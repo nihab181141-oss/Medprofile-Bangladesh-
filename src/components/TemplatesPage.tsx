@@ -37,6 +37,7 @@ interface Template {
 export default function TemplatesPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<"All" | "Modern" | "Premium" | "Luxury" | "Minimal">("All");
+  const [loadedFrames, setLoadedFrames] = useState<Record<string, boolean>>({});
 
   const templatesData: Template[] = [
     {
@@ -252,10 +253,42 @@ export default function TemplatesPage() {
 
                 {/* Simulated Web View Container */}
                 <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-900 border-b border-slate-800 select-none">
+                  
+                  {/* High-Fidelity Skeletal Loader to avoid layout shifts or white screens while iframes fetch */}
+                  {!loadedFrames[tpl.id] && (
+                    <div className="absolute inset-0 bg-slate-950 z-10 flex flex-col justify-between p-5 animate-pulse">
+                      {/* Simulated site header */}
+                      <div className="flex items-center justify-between border-b border-slate-900 pb-3">
+                        <div className="h-3 w-16 bg-slate-800 rounded"></div>
+                        <div className="flex gap-2">
+                          <div className="h-1.5 w-6 bg-slate-800 rounded"></div>
+                          <div className="h-1.5 w-6 bg-slate-800 rounded"></div>
+                        </div>
+                      </div>
+                      
+                      {/* Simulated content block */}
+                      <div className="space-y-2 my-auto text-center">
+                        <div className="h-3.5 w-1/2 bg-slate-800 rounded mx-auto"></div>
+                        <div className="h-2 w-1/3 bg-slate-800 rounded mx-auto"></div>
+                        <div className="h-5 w-16 bg-teal-500/10 border border-teal-500/20 rounded mx-auto mt-2"></div>
+                      </div>
+
+                      {/* Simulated clinical feature row */}
+                      <div className="grid grid-cols-3 gap-2 border-t border-slate-900 pt-3">
+                        <div className="h-1.5 bg-slate-900 rounded"></div>
+                        <div className="h-1.5 bg-slate-900 rounded"></div>
+                        <div className="h-1.5 bg-slate-900 rounded"></div>
+                      </div>
+                    </div>
+                  )}
+
                   <iframe 
                     src={tpl.url} 
                     title={`${tpl.name} Website Live Preview Frame`}
-                    className="absolute top-0 left-0 w-[150%] h-[150%] scale-[0.666] origin-top-left border-none pointer-events-none select-none bg-slate-900"
+                    onLoad={() => setLoadedFrames(prev => ({ ...prev, [tpl.id]: true }))}
+                    className={`absolute top-0 left-0 w-[150%] h-[150%] scale-[0.666] origin-top-left border-none pointer-events-none select-none bg-slate-900 transition-all duration-700 ${
+                      loadedFrames[tpl.id] ? "opacity-100 scale-[0.666]" : "opacity-0 scale-[0.64]"
+                    }`}
                     loading="lazy"
                   />
                   {/* Overlay blocker layer to preserve parent scrolling & pointer interactions */}
