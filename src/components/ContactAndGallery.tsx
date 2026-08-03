@@ -305,46 +305,55 @@ export default function ContactAndGallery() {
               </div>
             </motion.div>
 
-            {/* Card 02: Facebook support card (Coming Soon) */}
+            {/* Card 02: Facebook support card */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="md:col-span-1 group relative bg-white rounded-2xl p-8 flex flex-col justify-between shadow-[0_15px_45px_rgba(15,23,42,0.03)] hover:shadow-[0_25px_50px_rgba(15,23,42,0.06)] transition-all duration-300"
+              className="md:col-span-1 group relative bg-white rounded-2xl p-8 flex flex-col justify-between shadow-[0_15px_45px_rgba(14,165,233,0.06)] hover:shadow-[0_25px_50px_rgba(14,165,233,0.12)] transition-all duration-300"
             >
-              {/* Coming Soon badge */}
-              <div className="absolute top-4 right-4 bg-slate-100 text-slate-500 border border-slate-200 text-[9px] font-bold tracking-widest uppercase py-1 px-3 rounded-full select-none">
-                Coming Soon
+              {/* Active Badge overlay */}
+              <div className="absolute top-4 right-4 bg-sky-50 text-sky-800 border border-sky-100 font-mono text-[9px] font-extrabold tracking-widest uppercase py-1 px-3 rounded-full flex items-center gap-1 select-none">
+                <span className="w-1.5 h-1.5 bg-sky-500 rounded-full animate-ping"></span> Active Channel
               </div>
 
               <div>
-                <div className="w-16 h-16 rounded-2xl bg-slate-100 text-slate-400 flex items-center justify-center mb-6">
+                <div className="w-16 h-16 rounded-2xl bg-sky-50 text-sky-600 flex items-center justify-center mb-6 border border-sky-100/50">
                   <FacebookIcon />
                 </div>
 
-                <h3 className="font-display font-extrabold text-slate-700 text-xl tracking-tight leading-snug">
-                  Facebook Support
+                <h3 className="font-display font-black text-slate-900 text-xl tracking-tight leading-snug">
+                  Facebook Page
                 </h3>
 
-                <p className="mt-3 text-slate-400 text-xs sm:text-sm leading-relaxed font-semibold">
-                  Messenger inquiries, patient support workflows, and medical branding updates. This channel is currently being prepared to serve you.
+                <p className="mt-3 text-slate-500 text-xs sm:text-sm leading-relaxed font-medium">
+                  Follow our updates, clinical publishing tips, custom domain showcases, and interact with the MedProfile community.
                 </p>
 
-                <div className="mt-6 flex items-center gap-1.5 text-[10px] text-slate-400 font-bold select-none">
-                  <Clock className="w-3.5 h-3.5" />
-                  <span>Integration in Progress</span>
+                <div className="mt-5 space-y-2 text-[11px] text-slate-600 font-bold select-none">
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-sky-500" />
+                    <span>Latest updates & tips</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-sky-500" />
+                    <span>Community discussions</span>
+                  </div>
                 </div>
               </div>
 
-              <div className="mt-8 pt-4 border-t border-slate-150">
-                <button
-                  disabled
-                  className="w-full py-4 px-4 bg-slate-100 text-slate-400 font-display font-bold text-xs uppercase tracking-widest rounded-2xl flex items-center justify-center gap-2 cursor-not-allowed select-none"
+              <div className="mt-8 pt-4 border-t border-slate-100">
+                <a
+                  href="https://www.facebook.com/share/19VkASpQAm/"
+                  target="_blank"
+                  referrerPolicy="no-referrer"
+                  rel="noopener noreferrer"
+                  className="w-full py-4 px-4 bg-sky-500 hover:bg-sky-600 text-white font-display font-extrabold text-xs uppercase tracking-widest rounded-2xl flex items-center justify-center gap-2.5 transition-colors duration-200 active:scale-98 shadow-md shadow-sky-500/15"
                 >
-                  <Lock className="w-3.5 h-3.5" />
-                  <span>Coming Soon</span>
-                </button>
+                  <span>Visit Facebook Page</span>
+                  <ArrowUpRight className="w-4 h-4 text-white" />
+                </a>
               </div>
             </motion.div>
 
