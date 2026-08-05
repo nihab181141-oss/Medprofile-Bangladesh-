@@ -65,14 +65,14 @@ export default function Home() {
                 <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start pt-2">
                   <Link 
                     to="/pricing"
-                    className="w-full sm:w-auto px-8 py-4 bg-white hover:bg-slate-100 text-slate-900 rounded-xl font-bold text-sm tracking-wide shadow-xl shadow-slate-900/10 hover:shadow-brand-500/20 hover:-translate-y-0.5 active:scale-98 transition-all duration-200 cursor-pointer flex items-center justify-center gap-3 group"
+                    className="w-full sm:w-auto px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white rounded-xl font-bold text-sm tracking-wide shadow-xl shadow-slate-900/20 hover:shadow-slate-900/30 hover:-translate-y-0.5 active:scale-98 transition-all duration-200 cursor-pointer flex items-center justify-center gap-3 group"
                   >
                     Join MedProfile Now
                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                   </Link>
                   <Link 
                     to="/consultation"
-                    className="w-full sm:w-auto px-8 py-4 bg-white/85 backdrop-blur-sm text-slate-800 border border-slate-200 hover:border-slate-400 rounded-xl font-bold text-sm hover:bg-slate-50 hover:-translate-y-0.5 active:scale-98 transition-all duration-200 cursor-pointer flex items-center justify-center gap-2 shadow-sm"
+                    className="w-full sm:w-auto px-8 py-4 bg-white hover:bg-slate-50 text-slate-900 rounded-xl font-bold text-sm border border-slate-200 shadow-xl shadow-slate-200/50 hover:shadow-slate-200/80 hover:-translate-y-0.5 active:scale-98 transition-all duration-200 cursor-pointer flex items-center justify-center gap-2 shadow-sm"
                   >
                     Configure Demo Web
                   </Link>
@@ -284,10 +284,10 @@ export default function Home() {
               <Link to="/about" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white hover:bg-slate-100 text-slate-900 rounded-xl font-bold text-sm tracking-wide transition-colors w-full sm:w-auto">
                 Learn About Us <ArrowRight className="w-4 h-4" />
               </Link>
-              <Link to="/faq" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-slate-100 hover:bg-slate-200 text-slate-900 rounded-xl font-bold text-sm tracking-wide transition-colors w-full sm:w-auto">
+              <Link to="/faq" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white rounded-xl font-bold text-sm tracking-wide transition-colors w-full sm:w-auto">
                 View FAQs
               </Link>
-              <Link to="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-slate-100 hover:bg-slate-200 text-slate-900 rounded-xl font-bold text-sm tracking-wide transition-colors w-full sm:w-auto">
+              <Link to="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white rounded-xl font-bold text-sm tracking-wide transition-colors w-full sm:w-auto">
                 Contact Us
               </Link>
             </div>

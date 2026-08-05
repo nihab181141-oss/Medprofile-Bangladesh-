@@ -8,7 +8,6 @@ import {
 
 const technologies = [
   { name: 'HTML5', slug: 'html5', color: 'E34F26' },
-  { name: 'CSS3', slug: 'css3', color: '1572B6' },
   { name: 'JavaScript', slug: 'javascript', color: 'F7DF1E' },
   { name: 'TypeScript', slug: 'typescript', color: '3178C6' },
   { name: 'React', slug: 'react', color: '61DAFB' },
@@ -23,8 +22,14 @@ const technologies = [
   { name: 'Google Maps', slug: 'googlemaps', color: '4285F4' },
   { name: 'Google Analytics', slug: 'googleanalytics', color: 'E37400' },
   { name: 'Google Search Console', slug: 'googlesearchconsole', color: '4285F4' },
-  { name: 'OpenAI', slug: 'openai', color: '412991' },
-  { name: 'Google AI', slug: 'google', color: '4285F4' }
+  { name: 'Google AI', slug: 'google', color: '4285F4' },
+  { name: 'Facebook', slug: 'facebook', color: '0866FF' },
+  { name: 'Instagram', slug: 'instagram', color: 'FF0069' },
+  { name: 'Telegram', slug: 'telegram', color: '26A5E4' },
+  { name: 'WordPress', slug: 'wordpress', color: '21759B' },
+  { name: 'Cursor', slug: 'cursor', color: '000000' },
+  { name: 'Gemini', slug: 'googlegemini', color: '8E75B2' },
+  { name: 'Claude', slug: 'claude', color: 'D97757' }
 ];
 
 const solutions = [
