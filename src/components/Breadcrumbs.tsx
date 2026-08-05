@@ -13,7 +13,7 @@ export default function Breadcrumbs() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ol className="flex items-center space-x-2 text-xs text-slate-500 font-medium">
           <li>
-            <Link to="/" className="hover:text-teal-600 transition-colors flex items-center">
+            <Link to="/" className="hover:text-brand-600 transition-colors flex items-center">
               <Home className="w-3.5 h-3.5" />
             </Link>
           </li>
@@ -28,7 +28,7 @@ export default function Breadcrumbs() {
                 {isLast ? (
                   <span className="text-slate-800 font-bold">{label}</span>
                 ) : (
-                  <Link to={to} className="hover:text-teal-600 transition-colors">
+                  <Link to={to} className="hover:text-brand-600 transition-colors">
                     {label}
                   </Link>
                 )}

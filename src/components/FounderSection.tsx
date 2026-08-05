@@ -8,7 +8,7 @@ export default function FounderSection() {
       icon: Linkedin,
       label: "LinkedIn",
       href: "https://www.linkedin.com/in/nihab-al-mahjabin/",
-      color: "hover:text-blue-600 hover:bg-blue-50/80 hover:border-blue-200"
+      color: "hover:text-brand-600 hover:bg-brand-50/80 hover:border-brand-200"
     },
     {
       icon: Twitter,
@@ -20,15 +20,15 @@ export default function FounderSection() {
       icon: Mail,
       label: "Email Publisher",
       href: "mailto:nihabalmahjabin@gmail.com",
-      color: "hover:text-teal-600 hover:bg-teal-50/80 hover:border-teal-200"
+      color: "hover:text-brand-600 hover:bg-brand-50/80 hover:border-brand-200"
     }
   ];
 
   return (
     <section id="founder-section" className="py-28 md:py-40 bg-slate-50/30 border-t border-slate-200/45 scroll-mt-6 relative overflow-hidden">
       {/* Background ambient accents */}
-      <div className="absolute top-1/4 right-[10%] w-[350px] h-[350px] bg-teal-200/10 rounded-full filter blur-[100px] -z-10 pointer-events-none"></div>
-      <div className="absolute bottom-1/4 left-[10%] w-[350px] h-[350px] bg-sky-200/10 rounded-full filter blur-[100px] -z-10 pointer-events-none"></div>
+      <div className="absolute top-1/4 right-[10%] w-[350px] h-[350px] bg-brand-200/10 rounded-full filter blur-[100px] -z-10 pointer-events-none"></div>
+      <div className="absolute bottom-1/4 left-[10%] w-[350px] h-[350px] bg-brand-200/10 rounded-full filter blur-[100px] -z-10 pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         
@@ -41,7 +41,7 @@ export default function FounderSection() {
             transition={{ duration: 0.5 }}
             className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-slate-900/5 text-slate-800 rounded-full text-xs font-bold uppercase tracking-wider border border-slate-900/10 mb-5"
           >
-            <ShieldCheck className="w-3.5 h-3.5 text-teal-600" />
+            <ShieldCheck className="w-3.5 h-3.5 text-brand-600" />
             Leadership & Vision
           </motion.div>
           
@@ -52,7 +52,7 @@ export default function FounderSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-display font-black text-3xl md:text-5xl text-slate-900 tracking-tight leading-tight"
           >
-            Meet The <span className="bg-gradient-to-r from-teal-600 to-sky-600 bg-clip-text text-transparent">Founder</span>
+            Meet The <span className="bg-gradient-to-r from-brand-600 to-brand-600 bg-clip-text text-transparent">Founder</span>
           </motion.h2>
           
           <motion.p 
@@ -76,12 +76,12 @@ export default function FounderSection() {
             className="relative bg-white/80 backdrop-blur-md rounded-2xl p-8 sm:p-12 shadow-[0_20px_50px_rgba(15,23,42,0.04)] group overflow-hidden text-center"
           >
             {/* Styled border animation effect on hover */}
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-teal-500 via-sky-500 to-teal-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-500 via-brand-500 to-brand-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
 
             {/* Information Section */}
             <div className="space-y-6 max-w-2xl mx-auto flex flex-col items-center">
               <div className="space-y-2.5">
-                <div className="inline-flex items-center gap-1 bg-teal-50 text-teal-800 border border-teal-100 px-2.5 py-1 rounded-md text-[10px] font-black uppercase tracking-widest">
+                <div className="inline-flex items-center gap-1 bg-brand-50 text-brand-800 border border-brand-100 px-2.5 py-1 rounded-md text-[10px] font-black uppercase tracking-widest">
                   CEO & Founder
                 </div>
                 <h3 className="font-display font-extrabold text-2xl sm:text-3xl text-slate-900 tracking-tight">
@@ -90,7 +90,7 @@ export default function FounderSection() {
                 <p className="text-sm font-semibold text-slate-500 flex items-center justify-center gap-1.5">
                   Founder & CEO 
                   <span className="text-slate-300">•</span> 
-                  <span className="text-teal-600 font-bold">MedProfile Bangladesh</span>
+                  <span className="text-brand-600 font-bold">MedProfile Bangladesh</span>
                 </p>
               </div>
 
@@ -132,18 +132,18 @@ export default function FounderSection() {
             className="p-8 md:p-10 bg-slate-900 text-white rounded-3xl relative overflow-hidden shadow-xl"
           >
             {/* Abstract visual decor */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-teal-500/10 rounded-full filter blur-2xl pointer-events-none"></div>
-            <div className="absolute bottom-0 left-0 w-32 h-32 bg-sky-500/10 rounded-full filter blur-2xl pointer-events-none"></div>
+            <div className="absolute top-0 right-0 w-32 h-32 bg-brand-500/10 rounded-full filter blur-2xl pointer-events-none"></div>
+            <div className="absolute bottom-0 left-0 w-32 h-32 bg-brand-500/10 rounded-full filter blur-2xl pointer-events-none"></div>
 
             <div className="relative text-center space-y-4 max-w-2xl mx-auto">
-              <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-teal-500/10 text-teal-400 mb-1">
+              <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand-500/10 text-brand-400 mb-1">
                 <Sparkles className="w-5 h-5" />
               </div>
-              <p className="text-[10px] uppercase font-bold tracking-[0.25em] text-teal-400">Our Core Mission</p>
+              <p className="text-[10px] uppercase font-bold tracking-[0.25em] text-brand-400">Our Core Mission</p>
               <p className="font-display font-medium text-lg md:text-xl text-slate-100 leading-relaxed italic">
                 "Empowering doctors with professional digital identity solutions and helping patients find trusted healthcare professionals more easily."
               </p>
-              <div className="w-12 h-1 bg-gradient-to-r from-teal-500 to-sky-500 mx-auto rounded-full mt-4"></div>
+              <div className="w-12 h-1 bg-gradient-to-r from-brand-500 to-brand-500 mx-auto rounded-full mt-4"></div>
             </div>
           </motion.div>
         </div>

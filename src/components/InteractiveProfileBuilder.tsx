@@ -214,15 +214,15 @@ export default function InteractiveProfileBuilder() {
     switch (selectedTemplate) {
       case "teal":
         return {
-          bg: "bg-teal-50",
-          headerBg: "bg-teal-900",
-          accentColor: "text-teal-600",
-          primaryBtn: "bg-teal-600 hover:bg-teal-700",
-          border: "border-teal-200",
-          glow: "shadow-teal-100",
-          badge: "bg-teal-100 text-teal-800",
-          text: "text-teal-950",
-          lightAccent: "bg-teal-500/10",
+          bg: "bg-brand-50",
+          headerBg: "bg-brand-900",
+          accentColor: "text-brand-600",
+          primaryBtn: "bg-brand-600 hover:bg-brand-700",
+          border: "border-brand-200",
+          glow: "shadow-brand-100",
+          badge: "bg-brand-100 text-brand-800",
+          text: "text-brand-950",
+          lightAccent: "bg-brand-500/10",
         };
       case "slate":
         return {
@@ -239,15 +239,15 @@ export default function InteractiveProfileBuilder() {
       case "blue":
       default:
         return {
-          bg: "bg-sky-50/50",
-          headerBg: "bg-sky-950",
-          accentColor: "text-sky-600",
-          primaryBtn: "bg-sky-600 hover:bg-sky-700",
-          border: "border-sky-100",
-          glow: "shadow-sky-100",
-          badge: "bg-sky-100 text-sky-800",
-          text: "text-sky-950",
-          lightAccent: "bg-sky-500/10",
+          bg: "bg-brand-50/50",
+          headerBg: "bg-brand-950",
+          accentColor: "text-brand-600",
+          primaryBtn: "bg-brand-600 hover:bg-brand-700",
+          border: "border-brand-100",
+          glow: "shadow-brand-100",
+          badge: "bg-brand-100 text-brand-800",
+          text: "text-brand-950",
+          lightAccent: "bg-brand-500/10",
         };
     }
   };
@@ -263,27 +263,27 @@ export default function InteractiveProfileBuilder() {
         {/* Presets Header */}
         <div className="p-5 border-b border-slate-100 bg-slate-50/70">
           <div className="flex items-center gap-2 mb-3">
-            <span className="w-1.5 h-6 bg-teal-600 rounded"></span>
+            <span className="w-1.5 h-6 bg-brand-600 rounded"></span>
             <h3 className="font-display font-bold text-slate-800 text-xs tracking-wider uppercase">Select Sample Field Preset</h3>
           </div>
           <div className="flex flex-wrap gap-2">
             <button 
               onClick={() => loadPreset("cardiologist")}
-              className={`px-3 py-1.5 rounded-lg text-xs font-semibold cursor-pointer transition-all ${inputs.specialty.includes("Cardiology") ? "bg-teal-600 text-white shadow-sm" : "bg-white text-slate-600 border border-slate-200 hover:bg-slate-50"}`}
+              className={`px-3 py-1.5 rounded-lg text-xs font-semibold cursor-pointer transition-all ${inputs.specialty.includes("Cardiology") ? "bg-brand-600 text-white shadow-sm" : "bg-white text-slate-600 border border-slate-200 hover:bg-slate-50"}`}
               id="preset-cardio"
             >
               Cardiology Specialist
             </button>
             <button 
               onClick={() => loadPreset("pediatrician")}
-              className={`px-3 py-1.5 rounded-lg text-xs font-semibold cursor-pointer transition-all ${inputs.specialty.includes("Pediatrics") ? "bg-teal-600 text-white shadow-sm" : "bg-white text-slate-600 border border-slate-200 hover:bg-slate-50"}`}
+              className={`px-3 py-1.5 rounded-lg text-xs font-semibold cursor-pointer transition-all ${inputs.specialty.includes("Pediatrics") ? "bg-brand-600 text-white shadow-sm" : "bg-white text-slate-600 border border-slate-200 hover:bg-slate-50"}`}
               id="preset-pediatric"
             >
               Pediatrics Expert
             </button>
             <button 
               onClick={() => loadPreset("gastroenterologist")}
-              className={`px-3 py-1.5 rounded-lg text-xs font-semibold cursor-pointer transition-all ${inputs.specialty.includes("Gastro") ? "bg-teal-600 text-white shadow-sm" : "bg-white text-slate-600 border border-slate-200 hover:bg-slate-50"}`}
+              className={`px-3 py-1.5 rounded-lg text-xs font-semibold cursor-pointer transition-all ${inputs.specialty.includes("Gastro") ? "bg-brand-600 text-white shadow-sm" : "bg-white text-slate-600 border border-slate-200 hover:bg-slate-50"}`}
               id="preset-gastro"
             >
               Hepatology Speciality
@@ -295,7 +295,7 @@ export default function InteractiveProfileBuilder() {
         <div className="p-6 space-y-4">
           <div className="flex items-center justify-between mb-2">
             <h4 className="font-display font-bold text-slate-800 text-sm uppercase tracking-wide flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-teal-600" />
+              <Sparkles className="w-4 h-4 text-brand-600" />
               Customize Profile Fields
             </h4>
             <span className="text-[10px] font-mono text-slate-400">Section 5 Preview Engine</span>
@@ -311,7 +311,7 @@ export default function InteractiveProfileBuilder() {
                   name="name" 
                   value={inputs.name} 
                   onChange={handleInputChange}
-                  className="w-full pl-9 pr-3 py-2 text-sm border border-slate-200 rounded-lg focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 text-slate-800"
+                  className="w-full pl-9 pr-3 py-2 text-sm border border-slate-200 rounded-lg focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 text-slate-800"
                   placeholder="e.g. Dr. Sabrina Yasmin"
                   id="input-doc-name"
                 />
@@ -329,7 +329,7 @@ export default function InteractiveProfileBuilder() {
                     name="specialty" 
                     value={inputs.specialty} 
                     onChange={handleInputChange}
-                    className="w-full pl-9 pr-3 py-2 text-sm border border-slate-200 rounded-lg focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 text-slate-800"
+                    className="w-full pl-9 pr-3 py-2 text-sm border border-slate-200 rounded-lg focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 text-slate-800"
                     placeholder="e.g. Cardiology & Medicine"
                   />
                 </div>
@@ -345,7 +345,7 @@ export default function InteractiveProfileBuilder() {
                     name="degrees" 
                     value={inputs.degrees} 
                     onChange={handleInputChange}
-                    className="w-full pl-9 pr-3 py-2 text-sm border border-slate-200 rounded-lg focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 text-slate-800"
+                    className="w-full pl-9 pr-3 py-2 text-sm border border-slate-200 rounded-lg focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 text-slate-800"
                     placeholder="e.g. MBBS, FCPS"
                   />
                 </div>
@@ -360,7 +360,7 @@ export default function InteractiveProfileBuilder() {
                 name="chamberName" 
                 value={inputs.chamberName} 
                 onChange={handleInputChange}
-                className="w-full px-3 py-2 text-sm border border-slate-200 rounded-lg focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 text-slate-800"
+                className="w-full px-3 py-2 text-sm border border-slate-200 rounded-lg focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 text-slate-800"
                 placeholder="e.g. Metro Diagnostics"
               />
             </div>
@@ -375,7 +375,7 @@ export default function InteractiveProfileBuilder() {
                   name="chamberAddress" 
                   value={inputs.chamberAddress} 
                   onChange={handleInputChange}
-                  className="w-full pl-9 pr-3 py-2 text-sm border border-slate-200 rounded-lg focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 text-slate-800"
+                  className="w-full pl-9 pr-3 py-2 text-sm border border-slate-200 rounded-lg focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 text-slate-800"
                   placeholder="e.g. House 14, Road 5, Dhanmondi, Dhaka"
                 />
               </div>
@@ -392,7 +392,7 @@ export default function InteractiveProfileBuilder() {
                     name="workingHours" 
                     value={inputs.workingHours} 
                     onChange={handleInputChange}
-                    className="w-full pl-9 pr-3 py-2 text-sm border border-slate-200 rounded-lg focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 text-slate-800"
+                    className="w-full pl-9 pr-3 py-2 text-sm border border-slate-200 rounded-lg focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 text-slate-800"
                     placeholder="e.g. Sat-Wed, 5 PM - 9 PM"
                   />
                 </div>
@@ -408,7 +408,7 @@ export default function InteractiveProfileBuilder() {
                     name="contactPhone" 
                     value={inputs.contactPhone} 
                     onChange={handleInputChange}
-                    className="w-full pl-9 pr-3 py-2 text-sm border border-slate-200 rounded-lg focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 text-slate-800"
+                    className="w-full pl-9 pr-3 py-2 text-sm border border-slate-200 rounded-lg focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 text-slate-800"
                   />
                 </div>
               </div>
@@ -422,7 +422,7 @@ export default function InteractiveProfileBuilder() {
                   name="language" 
                   value={inputs.language} 
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 text-sm border border-slate-200 rounded-lg focus:outline-none focus:border-teal-500 bg-white text-slate-700"
+                  className="w-full px-3 py-2 text-sm border border-slate-200 rounded-lg focus:outline-none focus:border-brand-500 bg-white text-slate-700"
                 >
                   <option value="Bilingual (English & Bengali)">Bilingual (EN & BN)</option>
                   <option value="English Preferred">English Only</option>
@@ -435,13 +435,13 @@ export default function InteractiveProfileBuilder() {
                 <div className="flex gap-2">
                   <button 
                     onClick={() => setSelectedTemplate("blue")}
-                    className={`flex-1 py-1.5 px-2 rounded-lg border text-xs font-semibold cursor-pointer transition-all ${selectedTemplate === "blue" ? "border-teal-600 bg-teal-50 text-teal-800" : "border-slate-200 text-slate-600 bg-white hover:bg-slate-50"}`}
+                    className={`flex-1 py-1.5 px-2 rounded-lg border text-xs font-semibold cursor-pointer transition-all ${selectedTemplate === "blue" ? "border-brand-600 bg-brand-50 text-brand-800" : "border-slate-200 text-slate-600 bg-white hover:bg-slate-50"}`}
                   >
                     Medical Blue
                   </button>
                   <button 
                     onClick={() => setSelectedTemplate("teal")}
-                    className={`flex-1 py-1.5 px-2 rounded-lg border text-xs font-semibold cursor-pointer transition-all ${selectedTemplate === "teal" ? "border-teal-600 bg-teal-50 text-teal-800" : "border-slate-200 text-slate-600 bg-white hover:bg-slate-50"}`}
+                    className={`flex-1 py-1.5 px-2 rounded-lg border text-xs font-semibold cursor-pointer transition-all ${selectedTemplate === "teal" ? "border-brand-600 bg-brand-50 text-brand-800" : "border-slate-200 text-slate-600 bg-white hover:bg-slate-50"}`}
                   >
                     Modern Teal
                   </button>
@@ -460,7 +460,7 @@ export default function InteractiveProfileBuilder() {
             <button 
               onClick={triggerAIOptimization}
               disabled={loading}
-              className="w-full py-3.5 px-4 rounded-xl font-display font-bold text-xs tracking-wider uppercase text-white bg-teal-600 hover:bg-teal-700 active:scale-95 shadow-lg shadow-teal-100 transition-all cursor-pointer flex items-center justify-center gap-2"
+              className="w-full py-3.5 px-4 rounded-xl font-display font-bold text-xs tracking-wider uppercase text-white bg-brand-600 hover:bg-brand-700 active:scale-95 shadow-lg shadow-brand-100 transition-all cursor-pointer flex items-center justify-center gap-2"
               id="ai-generate-profile-btn"
             >
               {loading ? (
@@ -482,8 +482,8 @@ export default function InteractiveProfileBuilder() {
 
           {/* Conditional message handles API configuration errors gracefully */}
           {errorMsg && (
-            <div className="p-3 bg-amber-50/70 border border-amber-200 rounded-lg text-xs text-amber-800 flex items-start gap-2.5 animate-fade-in">
-              <AlertCircle className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+            <div className="p-3 bg-brand-50/70 border border-brand-200 rounded-lg text-xs text-brand-800 flex items-start gap-2.5 animate-fade-in">
+              <AlertCircle className="w-4 h-4 text-brand-600 shrink-0 mt-0.5" />
               <div className="leading-relaxed">
                 {errorMsg}
               </div>
@@ -498,21 +498,21 @@ export default function InteractiveProfileBuilder() {
         <div className="flex border-b border-slate-200 bg-slate-50/70 p-1.5 rounded-t-2xl border border-slate-200 border-b-0">
           <button 
             onClick={() => setActiveTab("website")}
-            className={`flex-1 py-2 px-3 rounded-lg text-xs font-semibold tracking-wide transition-all cursor-pointer flex items-center justify-center gap-1.5 ${activeTab === "website" ? "bg-white text-teal-800 shadow-sm" : "text-slate-500 hover:text-slate-800"}`}
+            className={`flex-1 py-2 px-3 rounded-lg text-xs font-semibold tracking-wide transition-all cursor-pointer flex items-center justify-center gap-1.5 ${activeTab === "website" ? "bg-white text-brand-800 shadow-sm" : "text-slate-500 hover:text-slate-800"}`}
           >
             <Eye className="w-3.5 h-3.5" />
             Live Mockup Website
           </button>
           <button 
             onClick={() => setActiveTab("seo")}
-            className={`flex-1 py-2 px-3 rounded-lg text-xs font-semibold tracking-wide transition-all cursor-pointer flex items-center justify-center gap-1.5 ${activeTab === "seo" ? "bg-white text-teal-800 shadow-sm" : "text-slate-500 hover:text-slate-800"}`}
+            className={`flex-1 py-2 px-3 rounded-lg text-xs font-semibold tracking-wide transition-all cursor-pointer flex items-center justify-center gap-1.5 ${activeTab === "seo" ? "bg-white text-brand-800 shadow-sm" : "text-slate-500 hover:text-slate-800"}`}
           >
             <Search className="w-3.5 h-3.5" />
             Google SEO Snippet
           </button>
           <button 
             onClick={() => setActiveTab("marketing")}
-            className={`flex-1 py-2 px-3 rounded-lg text-xs font-semibold tracking-wide transition-all cursor-pointer flex items-center justify-center gap-1.5 ${activeTab === "marketing" ? "bg-white text-teal-800 shadow-sm" : "text-slate-500 hover:text-slate-800"}`}
+            className={`flex-1 py-2 px-3 rounded-lg text-xs font-semibold tracking-wide transition-all cursor-pointer flex items-center justify-center gap-1.5 ${activeTab === "marketing" ? "bg-white text-brand-800 shadow-sm" : "text-slate-500 hover:text-slate-800"}`}
           >
             <Globe className="w-3.5 h-3.5" />
             Growth Strategy
@@ -534,37 +534,37 @@ export default function InteractiveProfileBuilder() {
               >
                 
                 {/* Browser Controls Strip */}
-                <div className="w-full bg-white rounded-t-xl px-4 py-2.5 border border-b-0 border-gray-250 flex items-center justify-between gap-4">
+                <div className="w-full bg-white rounded-t-xl px-4 py-2.5 border border-b-0 border-slate-250 flex items-center justify-between gap-4">
                   <div className="flex items-center gap-1.5">
                     <span className="w-2.5 h-2.5 rounded-full bg-red-400"></span>
                     <span className="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
                     <span className="w-2.5 h-2.5 rounded-full bg-green-400"></span>
                   </div>
-                  <div className="bg-gray-50 text-[10px] text-gray-500 py-1 px-4 rounded-md font-mono border border-gray-150 flex-1 max-w-sm text-center truncate">
+                  <div className="bg-slate-50 text-[10px] text-slate-500 py-1 px-4 rounded-md font-mono border border-slate-200 flex-1 max-w-sm text-center truncate">
                     https://medprofile.app/{inputs.name.toLowerCase().replace(/[^a-z]/g, "")}
                   </div>
-                  <div className="text-[10px] bg-sky-100 text-sky-800 px-2.5 py-0.5 rounded-full font-bold flex items-center gap-1 select-none">
+                  <div className="text-[10px] bg-brand-100 text-brand-800 px-2.5 py-0.5 rounded-full font-bold flex items-center gap-1 select-none">
                     <ShieldCheck className="w-3 h-3" /> Live
                   </div>
                 </div>
 
                 {/* Simulated Web Framework Body */}
-                <div className={`w-full bg-white rounded-b-xl border border-gray-250 overflow-hidden text-sm relative ${themeTheme.bg} transition-colors duration-500`}>
+                <div className={`w-full bg-white rounded-b-xl border border-slate-250 overflow-hidden text-sm relative ${themeTheme.bg} transition-colors duration-500`}>
                   
                   {/* Doctor Portal Accent Ribbon */}
-                  <div className="h-1 bg-gradient-to-r from-sky-500 via-teal-500 to-sky-600"></div>
+                  <div className="h-1 bg-gradient-to-r from-brand-500 via-brand-500 to-brand-600"></div>
 
                   {/* Header/Hero within the mock website */}
-                  <div className="p-6 md:p-8 bg-white border-b border-gray-100">
+                  <div className="p-6 md:p-8 bg-white border-b border-slate-100">
                     <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-5">
                       <div>
                         {/* Trust Badge */}
-                        <div className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-sky-50 text-sky-800 text-[10px] font-bold tracking-wide uppercase border border-sky-100 mb-2">
-                          <CheckCircle className="w-3 h-3 text-sky-600" /> MedProfile Verified Provider
+                        <div className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-brand-50 text-brand-800 text-[10px] font-bold tracking-wide uppercase border border-brand-100 mb-2">
+                          <CheckCircle className="w-3 h-3 text-brand-600" /> MedProfile Verified Provider
                         </div>
-                        <h1 className="text-xl md:text-2xl font-display font-bold text-gray-900 tracking-tight">{inputs.name}</h1>
+                        <h1 className="text-xl md:text-2xl font-display font-bold text-slate-900 tracking-tight">{inputs.name}</h1>
                         <p className={`text-xs md:text-sm font-semibold tracking-wide ${themeTheme.accentColor} mt-0.5`}>{inputs.specialty}</p>
-                        <p className="text-xs text-gray-500 font-medium mt-1 uppercase tracking-wider">{inputs.degrees}</p>
+                        <p className="text-xs text-slate-500 font-medium mt-1 uppercase tracking-wider">{inputs.degrees}</p>
                       </div>
                       
                       {/* Booking Actions */}
@@ -581,7 +581,7 @@ export default function InteractiveProfileBuilder() {
                           href="https://wa.me/8801902646475" 
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 font-display font-semibold text-xs tracking-wider uppercase text-white rounded-lg flex items-center justify-center gap-1.5 transition-all"
+                          className="px-4 py-2 bg-brand-600 hover:bg-brand-700 font-display font-semibold text-xs tracking-wider uppercase text-white rounded-lg flex items-center justify-center gap-1.5 transition-all"
                         >
                           <MessageSquare className="w-3.5 h-3.5" /> WhatsApp Chamber
                         </a>
@@ -589,7 +589,7 @@ export default function InteractiveProfileBuilder() {
                     </div>
 
                     {/* AI Generated core branding Tagline */}
-                    <div className={`p-3.5 ${themeTheme.lightAccent} border-l-4 ${selectedTemplate === "teal" ? "border-teal-500" : selectedTemplate === "slate" ? "border-slate-800" : "border-sky-500"} rounded-r-lg`}>
+                    <div className={`p-3.5 ${themeTheme.lightAccent} border-l-4 ${selectedTemplate === "teal" ? "border-brand-500" : selectedTemplate === "slate" ? "border-slate-800" : "border-brand-500"} rounded-r-lg`}>
                       <span className="text-xs font-bold text-xs uppercase tracking-wider opacity-60 block">Consultation Vision</span>
                       <p className={`font-display font-medium text-sm italic tracking-tight ${themeTheme.text}`}>
                         "{aiProfile.tagline}"
@@ -602,11 +602,11 @@ export default function InteractiveProfileBuilder() {
                     
                     {/* Professional Biography */}
                     <div>
-                      <h4 className="font-display font-bold text-gray-900 text-xs uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                      <h4 className="font-display font-bold text-slate-900 text-xs uppercase tracking-wider mb-2 flex items-center gap-1.5">
                         <Award className={`w-3.5 h-3.5 ${themeTheme.accentColor}`} />
                         Professional Biography
                       </h4>
-                      <p className="text-gray-700 leading-relaxed text-xs text-justify">
+                      <p className="text-slate-700 leading-relaxed text-xs text-justify">
                         {aiProfile.professionalBio}
                       </p>
                     </div>
@@ -615,40 +615,40 @@ export default function InteractiveProfileBuilder() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-3">
                       
                       {/* Chamber Details Card */}
-                      <div className="bg-white p-4 rounded-xl border border-gray-150 shadow-sm flex flex-col justify-between">
+                      <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
                         <div>
-                          <div className="flex items-center gap-1.5 border-b border-gray-100 pb-2 mb-2">
+                          <div className="flex items-center gap-1.5 border-b border-slate-100 pb-2 mb-2">
                             <MapPin className={`w-3.5 h-3.5 ${themeTheme.accentColor}`} />
-                            <h5 className="font-display font-bold text-gray-900 text-xs uppercase tracking-wide">Chamber Information</h5>
+                            <h5 className="font-display font-bold text-slate-900 text-xs uppercase tracking-wide">Chamber Information</h5>
                           </div>
-                          <p className="font-bold text-gray-800 text-xs mb-1">{inputs.chamberName}</p>
-                          <p className="text-gray-600 text-xs leading-relaxed mb-3">{inputs.chamberAddress}</p>
+                          <p className="font-bold text-slate-800 text-xs mb-1">{inputs.chamberName}</p>
+                          <p className="text-slate-600 text-xs leading-relaxed mb-3">{inputs.chamberAddress}</p>
                           
-                          <div className="flex items-center gap-1.5 text-xs text-gray-700 bg-gray-50 p-2 rounded border border-gray-100">
-                            <Clock className="w-3.5 h-3.5 text-gray-400 shrink-0" />
+                          <div className="flex items-center gap-1.5 text-xs text-slate-700 bg-slate-50 p-2 rounded border border-slate-100">
+                            <Clock className="w-3.5 h-3.5 text-slate-400 shrink-0" />
                             <div>
-                              <span className="font-semibold block text-[10px] text-gray-500">CONSULTING HOURS</span>
+                              <span className="font-semibold block text-[10px] text-slate-500">CONSULTING HOURS</span>
                               <span className="text-[11px]">{inputs.workingHours}</span>
                             </div>
                           </div>
                         </div>
 
-                        <div className="pt-3 border-t border-gray-100 mt-2 flex items-center justify-between text-2xs text-gray-400">
+                        <div className="pt-3 border-t border-slate-100 mt-2 flex items-center justify-between text-2xs text-slate-400">
                           <span>Map Location Connected ✓</span>
-                          <span className="font-semibold text-sky-600">Open Map</span>
+                          <span className="font-semibold text-brand-600">Open Map</span>
                         </div>
                       </div>
 
                       {/* Diagnostic Guidance Checklist */}
-                      <div className="bg-white p-4 rounded-xl border border-gray-150 shadow-sm">
-                        <div className="flex items-center gap-1.5 border-b border-gray-100 pb-2 mb-2">
+                      <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                        <div className="flex items-center gap-1.5 border-b border-slate-100 pb-2 mb-2">
                           <FileText className={`w-3.5 h-3.5 ${themeTheme.accentColor}`} />
-                          <h5 className="font-display font-bold text-gray-900 text-xs uppercase tracking-wide font-semibold">Chamber Guidelines</h5>
+                          <h5 className="font-display font-bold text-slate-900 text-xs uppercase tracking-wide font-semibold">Chamber Guidelines</h5>
                         </div>
-                        <p className="text-gray-600 text-xs leading-relaxed mb-1.5">
+                        <p className="text-slate-600 text-xs leading-relaxed mb-1.5">
                           {aiProfile.chamberGuide}
                         </p>
-                        <div className="mt-2.5 p-2 bg-amber-50/50 border border-amber-100 rounded text-amber-800 text-2xs font-medium">
+                        <div className="mt-2.5 p-2 bg-brand-50/50 border border-brand-100 rounded text-brand-800 text-2xs font-medium">
                           Appointments required at least 24 hours prior. Please bring past medical logs.
                         </div>
                       </div>
@@ -656,17 +656,17 @@ export default function InteractiveProfileBuilder() {
 
                     {/* Pediatric/Cardiologist Preventive Care Tips */}
                     <div className="pt-2">
-                      <h4 className="font-display font-bold text-gray-900 text-xs uppercase tracking-wider mb-2.5 flex items-center gap-1.5">
+                      <h4 className="font-display font-bold text-slate-900 text-xs uppercase tracking-wider mb-2.5 flex items-center gap-1.5">
                         <CheckCircle className={`w-3.5 h-3.5 ${themeTheme.accentColor}`} />
                         Patient Preventive Care & Wellness
                       </h4>
                       
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                         {aiProfile.patientAdvices.map((tip, idx) => (
-                          <div key={idx} className="bg-gray-50/70 p-3 rounded-lg border border-gray-200/60">
-                            <span className="text-[10px] font-bold text-sky-600 uppercase">Tip {idx+1}</span>
-                            <span className="font-display font-semibold text-gray-900 block text-xs mt-0.5">{tip.title}</span>
-                            <p className="text-gray-600 text-[11px] leading-relaxed mt-1">
+                          <div key={idx} className="bg-slate-50/70 p-3 rounded-lg border border-slate-200/60">
+                            <span className="text-[10px] font-bold text-brand-600 uppercase">Tip {idx+1}</span>
+                            <span className="font-display font-semibold text-slate-900 block text-xs mt-0.5">{tip.title}</span>
+                            <p className="text-slate-600 text-[11px] leading-relaxed mt-1">
                               {tip.description}
                             </p>
                           </div>
@@ -675,11 +675,11 @@ export default function InteractiveProfileBuilder() {
                     </div>
 
                     {/* Footer within Mockup */}
-                    <div className="pt-6 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center text-2xs text-gray-400 gap-3">
+                    <div className="pt-6 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center text-2xs text-slate-400 gap-3">
                       <span>Copyright © 2026 {inputs.name}. All rights reserved.</span>
                       <div className="flex gap-3">
                         <span>Managed via MedProfile Bangladesh</span>
-                        <span className="text-sky-600 font-semibold cursor-pointer">Official Profile Directory</span>
+                        <span className="text-brand-600 font-semibold cursor-pointer">Official Profile Directory</span>
                       </div>
                     </div>
 
@@ -697,34 +697,34 @@ export default function InteractiveProfileBuilder() {
                 exit={{ opacity: 0 }}
                 className="w-full space-y-4"
               >
-                <div className="p-5 bg-white border border-gray-200 rounded-xl shadow-sm">
+                <div className="p-5 bg-white border border-slate-200 rounded-xl shadow-sm">
                   <div className="flex items-center gap-2 mb-3">
-                    <Search className="w-4 h-4 text-sky-600" />
-                    <h4 className="font-display font-bold text-gray-900 text-sm">Primacy Search Layout (Google Bangladesh)</h4>
+                    <Search className="w-4 h-4 text-brand-600" />
+                    <h4 className="font-display font-bold text-slate-900 text-sm">Primacy Search Layout (Google Bangladesh)</h4>
                   </div>
-                  <p className="text-xs text-gray-600 leading-relaxed mb-4">
+                  <p className="text-xs text-slate-600 leading-relaxed mb-4">
                     Doctors with premium optimized schemas rank up to **400% higher** on target search terms (e.g., *"best hepatologist near Dhanmondi"*) because our architecture publishes strict static metadata directly to search engine bots.
                   </p>
 
                   {/* Google Custom result mock wrapper */}
-                  <div className="bg-gray-50 p-4 rounded-xl border border-gray-200 max-w-xl">
-                    <div className="flex items-center gap-1.5 text-2xs text-gray-500 mb-1 leading-none">
-                      <Globe className="w-3 h-3 text-sky-600" />
+                  <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 max-w-xl">
+                    <div className="flex items-center gap-1.5 text-2xs text-slate-500 mb-1 leading-none">
+                      <Globe className="w-3 h-3 text-brand-600" />
                       <span>https://medprofile.app</span>
                       <ChevronRight className="w-2.5 h-2.5" />
                       <span>{inputs.name.toLowerCase().replace(/[^a-z]/g, "")}</span>
                     </div>
                     {/* SEO Title */}
-                    <h5 className="text-sky-800 hover:underline text-sm font-semibold cursor-pointer font-serif mb-1 leading-snug">
+                    <h5 className="text-brand-800 hover:underline text-sm font-semibold cursor-pointer font-serif mb-1 leading-snug">
                       {aiProfile.seoTitle}
                     </h5>
                     {/* SEO Rich Meta Description */}
-                    <p className="text-[11px] text-gray-600 leading-normal font-sans">
+                    <p className="text-[11px] text-slate-600 leading-normal font-sans">
                       {aiProfile.seoMetaDescription}
                     </p>
                     
                     {/* Structured features block */}
-                    <div className="mt-2.5 flex items-center gap-2 text-[10px] text-gray-400 font-semibold uppercase tracking-wider">
+                    <div className="mt-2.5 flex items-center gap-2 text-[10px] text-slate-400 font-semibold uppercase tracking-wider">
                       <span>✓ CHAMBER: {inputs.chamberName}</span>
                       <span>•</span>
                       <span>HOURS: {inputs.workingHours}</span>
@@ -733,28 +733,28 @@ export default function InteractiveProfileBuilder() {
 
                   {/* Details and Action */}
                   <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-3.5">
-                    <div className="p-3.5 rounded-lg bg-sky-50/50 border border-sky-100 flex flex-col justify-between">
+                    <div className="p-3.5 rounded-lg bg-brand-50/50 border border-brand-100 flex flex-col justify-between">
                       <div>
-                        <span className="text-[10px] uppercase font-bold tracking-wider text-sky-700">Generated SEO Title Tag</span>
-                        <p className="text-xs text-gray-800 mt-1 font-mono break-all">{aiProfile.seoTitle}</p>
+                        <span className="text-[10px] uppercase font-bold tracking-wider text-brand-700">Generated SEO Title Tag</span>
+                        <p className="text-xs text-slate-800 mt-1 font-mono break-all">{aiProfile.seoTitle}</p>
                       </div>
                       <button 
                         onClick={() => copyToClipboard(aiProfile.seoTitle, "title")}
-                        className="mt-3 inline-flex items-center gap-1.5 text-[11px] font-semibold text-sky-700 hover:text-sky-800 cursor-pointer text-left self-start"
+                        className="mt-3 inline-flex items-center gap-1.5 text-[11px] font-semibold text-brand-700 hover:text-brand-800 cursor-pointer text-left self-start"
                       >
                         <Copy className="w-3.5 h-3.5" />
                         {copiedText === "title" ? "Copied!" : "Copy Title Tag"}
                       </button>
                     </div>
 
-                    <div className="p-3.5 rounded-lg bg-teal-50/40 border border-teal-100 flex flex-col justify-between">
+                    <div className="p-3.5 rounded-lg bg-brand-50/40 border border-brand-100 flex flex-col justify-between">
                       <div>
-                        <span className="text-[10px] uppercase font-bold tracking-wider text-teal-700">Meta Description Tag</span>
-                        <p className="text-xs text-gray-800 mt-1 leading-relaxed">{aiProfile.seoMetaDescription}</p>
+                        <span className="text-[10px] uppercase font-bold tracking-wider text-brand-700">Meta Description Tag</span>
+                        <p className="text-xs text-slate-800 mt-1 leading-relaxed">{aiProfile.seoMetaDescription}</p>
                       </div>
                       <button 
                         onClick={() => copyToClipboard(aiProfile.seoMetaDescription, "desc")}
-                        className="mt-3 inline-flex items-center gap-1.5 text-[11px] font-semibold text-teal-700 hover:text-teal-800 cursor-pointer text-left self-start"
+                        className="mt-3 inline-flex items-center gap-1.5 text-[11px] font-semibold text-brand-700 hover:text-brand-800 cursor-pointer text-left self-start"
                       >
                         <Copy className="w-3.5 h-3.5" />
                         {copiedText === "desc" ? "Copied!" : "Copy Meta Tag"}
@@ -764,8 +764,8 @@ export default function InteractiveProfileBuilder() {
                 </div>
 
                 {/* Additional SEO Tips */}
-                <div className="p-4 bg-sky-900 text-sky-100 rounded-xl leading-relaxed text-xs">
-                  <span className="font-bold block text-[10px] uppercase tracking-wider text-sky-300 mb-1">AUTOMATED SCHEMA INTEGRATION</span>
+                <div className="p-4 bg-brand-900 text-brand-100 rounded-xl leading-relaxed text-xs">
+                  <span className="font-bold block text-[10px] uppercase tracking-wider text-brand-300 mb-1">AUTOMATED SCHEMA INTEGRATION</span>
                   Our system configures structured **Schema.org JSON-LD markup** automatically (defining *"Physician"* entity types). This allows Google to show star ratings and map locations right in the search layout.
                 </div>
               </motion.div>
@@ -780,23 +780,23 @@ export default function InteractiveProfileBuilder() {
                 exit={{ opacity: 0 }}
                 className="w-full space-y-4"
               >
-                <div className="p-5 bg-white border border-gray-200 rounded-xl shadow-sm">
+                <div className="p-5 bg-white border border-slate-200 rounded-xl shadow-sm">
                   <div className="flex items-center gap-2 mb-3">
-                    <Globe className="w-4 h-4 text-sky-600" />
-                    <h4 className="font-display font-bold text-gray-900 text-sm">Professional Digital Brand Roadmap</h4>
+                    <Globe className="w-4 h-4 text-brand-600" />
+                    <h4 className="font-display font-bold text-slate-900 text-sm">Professional Digital Brand Roadmap</h4>
                   </div>
-                  <p className="text-xs text-gray-600 leading-relaxed mb-4">
+                  <p className="text-xs text-slate-600 leading-relaxed mb-4">
                     Synthesized by our high thinking agent to support the clinical practice expansion for **{inputs.name}**:
                   </p>
 
                   <div className="space-y-3.5">
                     {aiProfile.brandStrategy.map((step, idx) => (
-                      <div key={idx} className="flex gap-3 bg-gray-50 p-4 rounded-xl border border-gray-200">
-                        <div className="w-6 h-6 bg-sky-100 text-sky-800 rounded-full flex items-center justify-center font-bold text-xs shrink-0 select-none">
+                      <div key={idx} className="flex gap-3 bg-slate-50 p-4 rounded-xl border border-slate-200">
+                        <div className="w-6 h-6 bg-brand-100 text-brand-800 rounded-full flex items-center justify-center font-bold text-xs shrink-0 select-none">
                           {idx + 1}
                         </div>
                         <div>
-                          <p className="text-xs text-gray-700 leading-relaxed">
+                          <p className="text-xs text-slate-700 leading-relaxed">
                             {step}
                           </p>
                         </div>
@@ -804,8 +804,8 @@ export default function InteractiveProfileBuilder() {
                     ))}
                   </div>
 
-                  <div className="mt-5 p-3 rounded-lg bg-teal-50 border border-teal-200 text-teal-800 text-xs flex gap-2">
-                    <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                  <div className="mt-5 p-3 rounded-lg bg-brand-50 border border-brand-200 text-brand-800 text-xs flex gap-2">
+                    <CheckCircle className="w-4 h-4 text-brand-600 shrink-0 mt-0.5" />
                     <p className="leading-relaxed font-medium">
                       Following these personalized strategies generates an average **30% increase in chamber authority** within 60 days.
                     </p>

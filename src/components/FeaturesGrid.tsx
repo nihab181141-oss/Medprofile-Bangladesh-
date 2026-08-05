@@ -89,16 +89,16 @@ export default function FeaturesGrid() {
   return (
     <section id="features" className="py-28 md:py-40 bg-white relative overflow-hidden">
       {/* Absolute faint top-right glow */}
-      <div className="absolute top-0 right-0 w-80 h-80 bg-teal-50/50 rounded-full filter blur-[100px] pointer-events-none -z-10"></div>
+      <div className="absolute top-0 right-0 w-80 h-80 bg-brand-50/50 rounded-full filter blur-[100px] pointer-events-none -z-10"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         
         {/* Header Block */}
         <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-8 mb-20">
           <div className="max-w-2xl">
-            <span className="text-xs uppercase font-extrabold text-teal-600 tracking-widest block mb-2.5 font-display">Technical Portfolio</span>
+            <span className="text-xs uppercase font-extrabold text-brand-600 tracking-widest block mb-2.5 font-display">Technical Portfolio</span>
             <h2 className="font-display font-bold text-3xl md:text-5xl text-slate-900 tracking-tight leading-tight">
-              Everything a <span className="text-teal-600">Modern Doctor</span> Needs for Digital Prominence
+              Everything a <span className="text-brand-600">Modern Doctor</span> Needs for Digital Prominence
             </h2>
           </div>
           <p className="text-slate-500 text-sm leading-relaxed max-w-sm font-medium">
@@ -128,7 +128,7 @@ export default function FeaturesGrid() {
                 className="bg-white p-6 rounded-2xl shadow-[0_15px_40px_rgba(15,23,42,0.035)] transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-10 h-10 rounded-xl bg-teal-50 text-teal-700 flex items-center justify-center mb-5 border border-teal-200/40 transition-transform duration-300 group-hover:scale-105">
+                  <div className="w-10 h-10 rounded-xl bg-brand-50 text-brand-700 flex items-center justify-center mb-5 border border-brand-200/40 transition-transform duration-300 group-hover:scale-105">
                     <Icon className="w-5 h-5 stroke-[2.2]" />
                   </div>
                   <h3 className="font-display font-bold text-slate-900 text-sm tracking-tight mb-2">

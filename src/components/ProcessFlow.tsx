@@ -61,7 +61,7 @@ export default function ProcessFlow() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <span className="text-xs uppercase font-extrabold text-teal-650 tracking-widest block mb-2.5 font-display">Systematic Execution</span>
+          <span className="text-xs uppercase font-extrabold text-brand-650 tracking-widest block mb-2.5 font-display">Systematic Execution</span>
           <h2 className="font-display font-extrabold text-3xl md:text-5xl text-slate-900 tracking-tight leading-tight">
             Our Streamlined Onboarding Pathway
           </h2>
@@ -94,18 +94,18 @@ export default function ProcessFlow() {
                 {/* Visual marker tracker */}
                 <motion.div 
                   whileHover={{ scale: 1.06 }}
-                  className="w-20 h-20 rounded-3xl bg-white border border-slate-200 shadow-sm flex items-center justify-center text-teal-600 group-hover:border-teal-500 group-hover:shadow-md transition-all duration-300 mb-6 bg-gradient-to-br from-white to-slate-50/50"
+                  className="w-20 h-20 rounded-3xl bg-white border border-slate-200 shadow-sm flex items-center justify-center text-brand-600 group-hover:border-brand-500 group-hover:shadow-md transition-all duration-300 mb-6 bg-gradient-to-br from-white to-slate-50/50"
                 >
-                  <Icon className="w-7 h-7 text-teal-650" />
+                  <Icon className="w-7 h-7 text-brand-650" />
                 </motion.div>
 
                 {/* Step Number Tag */}
-                <span className="font-sans text-3xl font-black text-slate-200 group-hover:text-teal-100 transition-colors duration-300 block mb-2 select-none tracking-tight">
+                <span className="font-sans text-3xl font-black text-slate-200 group-hover:text-brand-100 transition-colors duration-300 block mb-2 select-none tracking-tight">
                   {st.num}
                 </span>
 
                 {/* Step Title & Subtext */}
-                <h3 className="font-display font-extrabold text-slate-800 text-base mb-2 group-hover:text-teal-750 transition-colors duration-200">
+                <h3 className="font-display font-extrabold text-slate-800 text-base mb-2 group-hover:text-brand-750 transition-colors duration-200">
                   {st.name}
                 </h3>
                 <p className="text-slate-500 text-xs leading-relaxed max-w-xs font-medium">
@@ -129,7 +129,7 @@ export default function ProcessFlow() {
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
         >
-          Have urgent chamber expansions? Contact our designated medical concierge for fast-track deployments inside of <span className="text-teal-650 font-bold">48 hours</span>.
+          Have urgent chamber expansions? Contact our designated medical concierge for fast-track deployments inside of <span className="text-brand-650 font-bold">48 hours</span>.
         </motion.div>
 
       </div>

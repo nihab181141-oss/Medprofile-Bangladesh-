@@ -8,7 +8,7 @@
   --color-medical-dark: #0f172a;
   --color-medical-primary: #0f766e; /* Teal-700 */
   --color-medical-teal: #0d9488;
-  --color-medical-accent: #38bdf8;
+  --color-medical-accent: #14b8a6;
 }
 
 /* Custom modern animations in Tailwind v4 */
@@ -93,12 +93,12 @@
     border: 1px solid rgba(255, 255, 255, 0.08);
   }
 
-  .glow-teal {
+  .glow-brand {
     box-shadow: 0 0 50px -10px rgba(13, 148, 136, 0.15);
   }
   
-  .glow-blue {
-    box-shadow: 0 0 50px -10px rgba(14, 165, 233, 0.15);
+  .glow-brand {
+    box-shadow: 0 0 50px -10px rgba(13, 148, 136, 0.15);
   }
 }
 
@@ -110,4 +110,64 @@ html {
 
 body {
   background-color: #fafafc;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes marquee-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.animate-marquee {
+  animation: marquee 120s linear infinite;
+}
+.animate-marquee-reverse {
+  animation: marquee-reverse 120s linear infinite;
+}
+.animate-marquee-fast {
+  animation: marquee 25s linear infinite;
+}
+.animate-marquee-slow {
+  animation: marquee 50s linear infinite;
+}
+
+@media (max-width: 768px) {
+  .animate-marquee {
+    animation-duration: 80s;
+  }
+  .animate-marquee-reverse {
+    animation-duration: 80s;
+  }
+  .animate-marquee-fast {
+    animation-duration: 15s;
+  }
+  .animate-marquee-slow {
+    animation-duration: 35s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee, .animate-marquee-reverse, .animate-marquee-fast, .animate-marquee-slow {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@theme {
+  --color-brand-50: #f0fdfa;
+  --color-brand-100: #ccfbf1;
+  --color-brand-200: #99f6e4;
+  --color-brand-300: #5eead4;
+  --color-brand-400: #2dd4bf;
+  --color-brand-500: #14b8a6;
+  --color-brand-600: #0d9488;
+  --color-brand-700: #0f766e;
+  --color-brand-800: #115e59;
+  --color-brand-900: #134e4a;
+  --color-brand-950: #042f2e;
 }

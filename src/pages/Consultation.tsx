@@ -16,10 +16,10 @@ export default function Consultation() {
         <meta property="og:description" content="Schedule a consultation and try our interactive profile builder to see how your digital identity will look." />
       </Helmet>
       <div>
-        <div className="py-20 md:py-28 bg-white border-b border-gray-150">
+        <div className="py-20 md:py-28 bg-white border-b border-slate-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-12">
-              <span className="text-xs uppercase font-bold text-sky-700 tracking-widest block mb-1.5 font-display">Interactive Showroom</span>
+              <span className="text-xs uppercase font-bold text-brand-700 tracking-widest block mb-1.5 font-display">Interactive Showroom</span>
               <h2 className="font-display font-medium text-3xl md:text-4xl text-slate-900 tracking-tight leading-tight">
                 Interactive Profile Architect Demo
               </h2>

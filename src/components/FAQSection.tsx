@@ -35,7 +35,7 @@ export default function FAQSection() {
   return (
     <section id="faq-section" className="py-28 md:py-40 bg-slate-50/40 relative overflow-hidden">
       {/* Absolute decorative glow */}
-      <div className="absolute bottom-0 left-1/3 w-80 h-80 bg-teal-500/5 rounded-full filter blur-[100px] pointer-events-none -z-10"></div>
+      <div className="absolute bottom-0 left-1/3 w-80 h-80 bg-brand-500/5 rounded-full filter blur-[100px] pointer-events-none -z-10"></div>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 relative">
         
@@ -47,7 +47,7 @@ export default function FAQSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <span className="text-xs uppercase font-extrabold text-teal-650 tracking-widest block mb-2.5 font-display">Common Queries</span>
+          <span className="text-xs uppercase font-extrabold text-brand-650 tracking-widest block mb-2.5 font-display">Common Queries</span>
           <h2 className="font-display font-extrabold text-3xl md:text-4xl text-slate-900 tracking-tight leading-tight">
             Frequently Asked Questions
           </h2>
@@ -110,13 +110,13 @@ export default function FAQSection() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mt-16 p-6 sm:p-8 bg-gradient-to-r from-slate-900 via-sky-950 to-slate-900 text-white rounded-3xl border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl relative overflow-hidden"
+          className="mt-16 p-6 sm:p-8 bg-gradient-to-r from-slate-900 via-brand-950 to-slate-900 text-white rounded-3xl border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl relative overflow-hidden"
         >
           {/* subtle inside abstract decor */}
-          <div className="absolute right-0 top-0 w-32 h-32 bg-teal-500/10 rounded-full filter blur-xl pointer-events-none"></div>
+          <div className="absolute right-0 top-0 w-32 h-32 bg-brand-500/10 rounded-full filter blur-xl pointer-events-none"></div>
 
           <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 text-center sm:text-left relative z-10">
-            <div className="p-3 bg-white/10 text-teal-400 rounded-2xl border border-white/5 shrink-0">
+            <div className="p-3 bg-white/10 text-brand-400 rounded-2xl border border-white/5 shrink-0">
               <MessageSquare className="w-6 h-6 animate-pulse" />
             </div>
             <div>
@@ -128,7 +128,7 @@ export default function FAQSection() {
             href="https://wa.me/8801902646475"
             target="_blank"
             rel="noopener noreferrer"
-            className="py-3 px-5 bg-teal-500 hover:bg-teal-600 text-slate-950 font-display font-bold text-xs uppercase tracking-widest rounded-xl transition-all shadow-lg hover:shadow-teal-500/20 active:scale-95 relative z-10"
+            className="py-3 px-5 bg-brand-500 hover:bg-brand-400 text-slate-950 font-display font-bold text-xs uppercase tracking-widest rounded-xl transition-all shadow-lg hover:shadow-brand-500/20 active:scale-95 relative z-10"
           >
             Chat with Engineering
           </a>

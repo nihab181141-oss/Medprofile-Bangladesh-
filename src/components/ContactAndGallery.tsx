@@ -32,17 +32,17 @@ export default function ContactAndGallery() {
         <div className="w-full h-full bg-slate-900/50 p-4 flex flex-col justify-between relative overflow-hidden text-left">
           {/* Top Navbar */}
           <div className="flex items-center justify-between border-b border-white/10 pb-2">
-            <span className="text-[9px] font-sans font-extrabold text-teal-400 tracking-wide">EliteClinic</span>
+            <span className="text-[9px] font-sans font-extrabold text-brand-400 tracking-wide">EliteClinic</span>
             <div className="flex gap-1.5">
               <span className="w-3 h-1 bg-white/40 rounded-full"></span>
-              <span className="w-5 h-1 bg-teal-500 rounded-full"></span>
+              <span className="w-5 h-1 bg-brand-500 rounded-full"></span>
             </div>
           </div>
           {/* Hero segment */}
           <div className="space-y-1.5 pt-3">
             <div className="flex items-center gap-1">
-              <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-ping"></span>
-              <span className="text-[7px] text-teal-300 font-extrabold uppercase tracking-widest">Prof. Dr. Shakil Jamil</span>
+              <span className="w-1.5 h-1.5 bg-brand-400 rounded-full animate-ping"></span>
+              <span className="text-[7px] text-brand-300 font-extrabold uppercase tracking-widest">Prof. Dr. Shakil Jamil</span>
             </div>
             <h4 className="text-[11px] font-display font-black leading-tight text-white tracking-tight">
               Leading Cardiology Consultancy in Dhaka
@@ -53,8 +53,8 @@ export default function ContactAndGallery() {
           </div>
           {/* Action indicator */}
           <div className="flex items-center justify-between pt-2">
-            <span className="text-[8px] font-mono text-teal-400 font-semibold bg-teal-500/10 px-1.5 py-0.5 rounded border border-teal-500/10">Appt: +8801902646475</span>
-            <span className="w-3.5 h-3.5 rounded-full bg-teal-500/30 flex items-center justify-center text-teal-400 text-[8px] font-bold">★</span>
+            <span className="text-[8px] font-mono text-brand-400 font-semibold bg-brand-500/10 px-1.5 py-0.5 rounded border border-brand-500/10">Appt: +8801902646475</span>
+            <span className="w-3.5 h-3.5 rounded-full bg-brand-500/30 flex items-center justify-center text-brand-400 text-[8px] font-bold">★</span>
           </div>
         </div>
       )
@@ -72,25 +72,25 @@ export default function ContactAndGallery() {
         <div className="w-full h-full bg-slate-950/75 p-4 flex flex-col justify-between relative overflow-hidden text-left">
           {/* Top Navbar */}
           <div className="flex items-center justify-between border-b border-white/5 pb-2">
-            <span className="text-[9px] font-sans font-black text-sky-400 tracking-tight">PinnacleHealth</span>
+            <span className="text-[9px] font-sans font-black text-brand-400 tracking-tight">PinnacleHealth</span>
             <span className="text-[7px] text-slate-500 bg-white/5 px-2 py-0.5 rounded border border-white/5 font-mono">Chamber Live</span>
           </div>
           {/* Hero segment */}
           <div className="space-y-1.5 pt-3">
-            <span className="text-[7px] text-sky-300 font-bold uppercase tracking-wider block">CHAMBER PORTAL</span>
+            <span className="text-[7px] text-brand-300 font-bold uppercase tracking-wider block">CHAMBER PORTAL</span>
             <h4 className="text-[11px] font-display font-black leading-normal text-white">
               Surgically Polished Pediatric Care Suite
             </h4>
             <div className="grid grid-cols-3 gap-1 pt-1">
               <span className="bg-white/5 py-1 text-center rounded text-[7px] text-slate-400 border border-white/5">Sat-Mon</span>
-              <span className="bg-sky-500/15 py-1 text-center rounded text-[7px] text-sky-400 border border-sky-500/10">04:00 PM</span>
+              <span className="bg-brand-500/15 py-1 text-center rounded text-[7px] text-brand-400 border border-brand-500/10">04:00 PM</span>
               <span className="bg-white/5 py-1 text-center rounded text-[7px] text-slate-400 border border-white/5">Dhanmondi</span>
             </div>
           </div>
           {/* Footer stats */}
           <div className="flex items-center justify-between border-t border-white/5 pt-2 text-[7px] text-slate-400 font-medium">
             <span>BMDC Reg A-5942</span>
-            <span className="text-emerald-400 font-semibold flex items-center gap-0.5">● 100% Online</span>
+            <span className="text-brand-400 font-semibold flex items-center gap-0.5">● 100% Online</span>
           </div>
         </div>
       )
@@ -105,30 +105,30 @@ export default function ContactAndGallery() {
       url: "https://medprofile-03.vercel.app/",
       colors: ["#0f172a", "#1e293b", "#334155"], // Dark Slate Luxury
       previewBlocks: (
-        <div className="w-full h-full bg-indigo-950/40 p-4 flex flex-col justify-between relative overflow-hidden text-left">
+        <div className="w-full h-full bg-brand-950/40 p-4 flex flex-col justify-between relative overflow-hidden text-left">
           {/* Premium Glowing Blob */}
-          <div className="absolute top-0 right-0 w-16 h-16 bg-teal-500/20 rounded-full filter blur-md"></div>
+          <div className="absolute top-0 right-0 w-16 h-16 bg-brand-500/20 rounded-full filter blur-md"></div>
           {/* Grid header */}
           <div className="flex items-center gap-1.5">
-            <div className="w-4 h-4 rounded-full bg-teal-500/20 flex items-center justify-center text-teal-400 text-[8px] font-bold">✚</div>
-            <span className="text-[8px] text-indigo-200 uppercase tracking-widest font-extrabold">Careflow Integrated</span>
+            <div className="w-4 h-4 rounded-full bg-brand-500/20 flex items-center justify-center text-brand-400 text-[8px] font-bold">✚</div>
+            <span className="text-[8px] text-brand-200 uppercase tracking-widest font-extrabold">Careflow Integrated</span>
           </div>
           {/* Main profile */}
           <div className="space-y-1.5 pt-2">
             <h4 className="text-[11px] font-display font-extrabold leading-snug text-white">
               Custom Booking & Telehealth Gateway
             </h4>
-            <p className="text-[8px] text-indigo-200/70">
+            <p className="text-[8px] text-brand-200/70">
               Patients request virtual care appointments, read publications, and get GPS direction cards instantly.
             </p>
           </div>
           {/* Visual card badge */}
           <div className="p-1.5 bg-white/5 rounded border border-white/5 flex items-center justify-between mt-1">
             <div className="flex items-center gap-1">
-              <span className="w-1 h-3 bg-teal-400 rounded"></span>
+              <span className="w-1 h-3 bg-brand-400 rounded"></span>
               <span className="text-[7px] text-slate-300 font-semibold">Verified Digital Footprint</span>
             </div>
-            <span className="text-[7px] font-extrabold text-teal-400 underline cursor-pointer">Live Map</span>
+            <span className="text-[7px] font-extrabold text-brand-400 underline cursor-pointer">Live Map</span>
           </div>
         </div>
       )
@@ -147,14 +147,14 @@ export default function ContactAndGallery() {
           {/* Minimal design */}
           <div className="flex items-center justify-between border-b border-white/10 pb-2">
             <div className="flex items-center gap-1">
-              <div className="w-1.5 h-1.5 rounded-full bg-teal-500"></div>
+              <div className="w-1.5 h-1.5 rounded-full bg-brand-500"></div>
               <span className="text-[8px] text-slate-300 font-bold uppercase tracking-widest font-mono">DR. PARVEZ AHMED</span>
             </div>
-            <span className="text-[7px] bg-teal-400/10 text-teal-300 px-1 rounded font-bold">FRCS</span>
+            <span className="text-[7px] bg-brand-400/10 text-brand-300 px-1 rounded font-bold">FRCS</span>
           </div>
           {/* Specialties statement */}
           <div className="space-y-1 pt-3">
-            <p className="text-[8px] uppercase tracking-wider text-teal-400 font-extrabold">Orthopaedic surgeon</p>
+            <p className="text-[8px] uppercase tracking-wider text-brand-400 font-extrabold">Orthopaedic surgeon</p>
             <h4 className="text-[11px] font-semibold text-white tracking-tight leading-normal">
               Digital Identity Engineered for Extreme Reach
             </h4>
@@ -162,7 +162,7 @@ export default function ContactAndGallery() {
           {/* Simple directions */}
           <div className="flex justify-between items-center bg-white/5 px-2 py-1.5 rounded-lg text-[7px] text-slate-400">
             <span>Specialist Consultation chamber, Banani</span>
-            <span className="font-extrabold text-teal-400">→</span>
+            <span className="font-extrabold text-brand-400">→</span>
           </div>
         </div>
       )
@@ -184,7 +184,7 @@ export default function ContactAndGallery() {
   // SVG Custom premium icon for Facebook
   const FacebookIcon = () => (
     <svg 
-      className="w-7 h-7 sm:w-8 sm:h-8 opacity-60 text-slate-400 group-hover:text-sky-500 transition-colors duration-300"
+      className="w-7 h-7 sm:w-8 sm:h-8 opacity-60 text-slate-400 group-hover:text-brand-500 transition-colors duration-300"
       xmlns="http://www.w3.org/2000/svg" 
       viewBox="0 0 320 512" 
       fill="currentColor"
@@ -196,7 +196,7 @@ export default function ContactAndGallery() {
   // SVG Custom premium icon for Instagram
   const InstagramIcon = () => (
     <svg 
-      className="w-7 h-7 sm:w-8 sm:h-8 opacity-60 text-slate-400 group-hover:text-pink-500 transition-colors duration-300"
+      className="w-7 h-7 sm:w-8 sm:h-8 opacity-60 text-slate-400 group-hover:text-brand-500 transition-colors duration-300"
       xmlns="http://www.w3.org/2000/svg" 
       viewBox="0 0 448 512" 
       fill="currentColor"
@@ -211,8 +211,8 @@ export default function ContactAndGallery() {
       <section id="contact-us" className="py-28 md:py-40 bg-white relative overflow-hidden border-t border-slate-100 scroll-mt-20">
         
         {/* Soft abstract floating dot backdrops */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-teal-100/10 rounded-full filter blur-[150px] -z-10"></div>
-        <div className="absolute bottom-0 right-0 w-80 h-80 bg-teal-50/50 rounded-full filter blur-[120px] -z-10"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-100/10 rounded-full filter blur-[150px] -z-10"></div>
+        <div className="absolute bottom-0 right-0 w-80 h-80 bg-brand-50/50 rounded-full filter blur-[120px] -z-10"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           
@@ -223,9 +223,9 @@ export default function ContactAndGallery() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-3 py-1 bg-teal-50 border border-teal-100 text-teal-800 rounded-full text-xs font-bold uppercase tracking-wider mb-4"
+              className="inline-flex items-center gap-2 px-3 py-1 bg-brand-50 border border-brand-100 text-brand-800 rounded-full text-xs font-bold uppercase tracking-wider mb-4"
             >
-              <Activity className="w-3.5 h-3.5 text-teal-600 animate-pulse" />
+              <Activity className="w-3.5 h-3.5 text-brand-600 animate-pulse" />
               Direct Support Portal
             </motion.div>
 
@@ -262,12 +262,12 @@ export default function ContactAndGallery() {
               className="md:col-span-1 group relative bg-white rounded-2xl p-8 flex flex-col justify-between shadow-[0_15px_45px_rgba(16,185,129,0.06)] hover:shadow-[0_25px_50px_rgba(16,185,129,0.12)] transition-all duration-300"
             >
               {/* Active Badge overlay */}
-              <div className="absolute top-4 right-4 bg-emerald-50 text-emerald-800 border border-emerald-100 font-mono text-[9px] font-extrabold tracking-widest uppercase py-1 px-3 rounded-full flex items-center gap-1 select-none">
-                <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-ping"></span> Active Channel
+              <div className="absolute top-4 right-4 bg-brand-50 text-brand-800 border border-brand-100 font-mono text-[9px] font-extrabold tracking-widest uppercase py-1 px-3 rounded-full flex items-center gap-1 select-none">
+                <span className="w-1.5 h-1.5 bg-brand-500 rounded-full animate-ping"></span> Active Channel
               </div>
 
               <div>
-                <div className="w-16 h-16 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-6 border border-emerald-100/50">
+                <div className="w-16 h-16 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center mb-6 border border-brand-100/50">
                   <WhatsAppIcon />
                 </div>
 
@@ -281,11 +281,11 @@ export default function ContactAndGallery() {
 
                 <div className="mt-5 space-y-2 text-[11px] text-slate-600 font-bold select-none">
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-brand-500" />
                     <span>Average reply time: {"<"} 5 Minutes</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-brand-500" />
                     <span>24/7 Priority Clinical Support</span>
                   </div>
                 </div>
@@ -297,7 +297,7 @@ export default function ContactAndGallery() {
                   target="_blank"
                   referrerPolicy="no-referrer"
                   rel="noopener noreferrer"
-                  className="w-full py-4 px-4 bg-emerald-500 hover:bg-emerald-600 text-white font-display font-extrabold text-xs uppercase tracking-widest rounded-2xl flex items-center justify-center gap-2.5 transition-colors duration-200 active:scale-95 shadow-md shadow-emerald-500/15"
+                  className="w-full py-4 px-4 bg-brand-500 hover:bg-brand-400 text-slate-950 font-display font-extrabold text-xs uppercase tracking-widest rounded-2xl flex items-center justify-center gap-2.5 transition-colors duration-200 active:scale-95 shadow-md shadow-brand-500/15"
                 >
                   <span>Connect via WhatsApp</span>
                   <ArrowUpRight className="w-4 h-4 text-white" />
@@ -314,12 +314,12 @@ export default function ContactAndGallery() {
               className="md:col-span-1 group relative bg-white rounded-2xl p-8 flex flex-col justify-between shadow-[0_15px_45px_rgba(14,165,233,0.06)] hover:shadow-[0_25px_50px_rgba(14,165,233,0.12)] transition-all duration-300"
             >
               {/* Active Badge overlay */}
-              <div className="absolute top-4 right-4 bg-sky-50 text-sky-800 border border-sky-100 font-mono text-[9px] font-extrabold tracking-widest uppercase py-1 px-3 rounded-full flex items-center gap-1 select-none">
-                <span className="w-1.5 h-1.5 bg-sky-500 rounded-full animate-ping"></span> Active Channel
+              <div className="absolute top-4 right-4 bg-brand-50 text-brand-800 border border-brand-100 font-mono text-[9px] font-extrabold tracking-widest uppercase py-1 px-3 rounded-full flex items-center gap-1 select-none">
+                <span className="w-1.5 h-1.5 bg-brand-500 rounded-full animate-ping"></span> Active Channel
               </div>
 
               <div>
-                <div className="w-16 h-16 rounded-2xl bg-sky-50 text-sky-600 flex items-center justify-center mb-6 border border-sky-100/50">
+                <div className="w-16 h-16 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center mb-6 border border-brand-100/50">
                   <FacebookIcon />
                 </div>
 
@@ -333,11 +333,11 @@ export default function ContactAndGallery() {
 
                 <div className="mt-5 space-y-2 text-[11px] text-slate-600 font-bold select-none">
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-sky-500" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-brand-500" />
                     <span>Latest updates & tips</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-sky-500" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-brand-500" />
                     <span>Community discussions</span>
                   </div>
                 </div>
@@ -349,7 +349,7 @@ export default function ContactAndGallery() {
                   target="_blank"
                   referrerPolicy="no-referrer"
                   rel="noopener noreferrer"
-                  className="w-full py-4 px-4 bg-sky-500 hover:bg-sky-600 text-white font-display font-extrabold text-xs uppercase tracking-widest rounded-2xl flex items-center justify-center gap-2.5 transition-colors duration-200 active:scale-95 shadow-md shadow-sky-500/15"
+                  className="w-full py-4 px-4 bg-brand-500 hover:bg-brand-400 text-slate-950 font-display font-extrabold text-xs uppercase tracking-widest rounded-2xl flex items-center justify-center gap-2.5 transition-colors duration-200 active:scale-95 shadow-md shadow-brand-500/15"
                 >
                   <span>Visit Facebook Page</span>
                   <ArrowUpRight className="w-4 h-4 text-white" />
