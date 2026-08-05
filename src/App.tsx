@@ -290,7 +290,7 @@ export default function App() {
 
                 <button 
                   onClick={() => scrollToSection("demo-sandbox")}
-                  className="w-full sm:w-auto px-8 py-4 bg-white/85 backdrop-blur-sm text-slate-800 border border-slate-200 hover:border-slate-350 rounded-xl font-bold text-sm hover:bg-slate-50 hover:-translate-y-0.5 active:scale-98 transition-all duration-200 cursor-pointer flex items-center justify-center gap-2 shadow-sm"
+                  className="w-full sm:w-auto px-8 py-4 bg-white/85 backdrop-blur-sm text-slate-800 border border-slate-200 hover:border-slate-400 rounded-xl font-bold text-sm hover:bg-slate-50 hover:-translate-y-0.5 active:scale-98 transition-all duration-200 cursor-pointer flex items-center justify-center gap-2 shadow-sm"
                 >
                   Configure Demo Web
                 </button>
@@ -421,7 +421,7 @@ export default function App() {
                 </div>
 
                 {/* Left Floating Doctor Badge */}
-                <div className="absolute -bottom-6 -left-6 bg-white border border-slate-250 p-4 rounded-2xl shadow-xl flex items-center gap-3.5 max-w-[210px] transition-transform duration-300 hover:-translate-y-1 z-20">
+                <div className="absolute -bottom-6 -left-6 bg-white border border-slate-300 p-4 rounded-2xl shadow-xl flex items-center gap-3.5 max-w-[210px] transition-transform duration-300 hover:-translate-y-1 z-20">
                   <div className="w-10 h-10 bg-teal-50 border border-teal-100 text-teal-600 rounded-xl flex items-center justify-center shrink-0">
                     <Activity className="w-5 h-5 animate-pulse" />
                   </div>
@@ -639,22 +639,22 @@ export default function App() {
             <h4 className="font-display font-semibold text-white tracking-wider text-xs uppercase text-teal-400">Quick Portal Indices</h4>
             <ul className="space-y-2.5 text-xs">
               <li>
-                <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="hover:text-teal-450 transition-colors cursor-pointer text-left">
+                <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="hover:text-teal-500 transition-colors cursor-pointer text-left">
                   Home Portal Primary
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollToSection("features")} className="hover:text-teal-450 transition-colors cursor-pointer text-left">
+                <button onClick={() => scrollToSection("features")} className="hover:text-teal-500 transition-colors cursor-pointer text-left">
                   Comprehensive Feature Checklist
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollToSection("pricing-section")} className="hover:text-teal-450 transition-colors cursor-pointer text-left">
+                <button onClick={() => scrollToSection("pricing-section")} className="hover:text-teal-500 transition-colors cursor-pointer text-left">
                   Professional Investment Plans
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollToSection("demo-sandbox")} className="hover:text-teal-450 transition-colors cursor-pointer text-left">
+                <button onClick={() => scrollToSection("demo-sandbox")} className="hover:text-teal-500 transition-colors cursor-pointer text-left">
                   Interactive Sandbox Builder
                 </button>
               </li>

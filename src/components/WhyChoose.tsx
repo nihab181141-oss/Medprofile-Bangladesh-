@@ -119,7 +119,7 @@ export default function WhyChoose() {
                   </div>
 
                   {/* Title and Body */}
-                  <h3 className="font-display font-extrabold text-slate-850 text-lg group-hover:text-teal-700 transition-colors duration-200">
+                  <h3 className="font-display font-extrabold text-slate-900 text-lg group-hover:text-teal-700 transition-colors duration-200">
                     {pt.title}
                   </h3>
                   <p className="mt-3 text-slate-500 text-xs sm:text-sm leading-relaxed text-left font-medium">
@@ -133,7 +133,7 @@ export default function WhyChoose() {
         
         {/* Statistics highlights bar */}
         <motion.div 
-          className="mt-20 bg-slate-900 rounded-3xl p-8 md:p-12 shadow-2xl border border-slate-800 text-white flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-slate-850 items-center justify-between text-center md:text-left gap-8 relative overflow-hidden"
+          className="mt-20 bg-slate-900 rounded-3xl p-8 md:p-12 shadow-2xl border border-slate-800 text-white flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-slate-800 items-center justify-between text-center md:text-left gap-8 relative overflow-hidden"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

@@ -170,8 +170,8 @@ export default function TemplatesPage() {
                   onClick={() => setSelectedCategory(cat)}
                   className={`px-4 py-2 rounded-full text-xs font-bold transition-all duration-300 cursor-pointer ${
                     selectedCategory === cat
-                      ? "bg-slate-900 text-teal-400 shadow-md scale-102"
-                      : "bg-slate-100 hover:bg-slate-200 text-slate-650"
+                      ? "bg-slate-900 text-teal-400 shadow-md scale-105"
+                      : "bg-slate-100 hover:bg-slate-200 text-slate-600"
                   }`}
                 >
                   {cat}
@@ -210,14 +210,14 @@ export default function TemplatesPage() {
         
         {filteredTemplates.length === 0 ? (
           <div className="text-center py-20 bg-white rounded-3xl border border-slate-200 max-w-xl mx-auto p-8 space-y-4">
-            <Monitor className="w-12 h-12 text-slate-350 mx-auto" />
+            <Monitor className="w-12 h-12 text-slate-400 mx-auto" />
             <h3 className="font-display font-bold text-lg text-slate-800">No Templates Match Your Query</h3>
             <p className="text-xs text-slate-500">
               Try adjusting your search criteria or choosing a different class category badge from above.
             </p>
             <button
               onClick={() => { setSearchQuery(""); setSelectedCategory("All"); }}
-              className="px-6 py-2.5 bg-slate-900 text-white rounded-full text-xs font-semibold hover:bg-slate-850 cursor-pointer"
+              className="px-6 py-2.5 bg-slate-900 text-white rounded-full text-xs font-semibold hover:bg-slate-900 cursor-pointer"
             >
               Reset Filters
             </button>
@@ -230,7 +230,7 @@ export default function TemplatesPage() {
                 initial={{ opacity: 0, y: 35 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: idx * 0.08 }}
-                className="bg-slate-950 rounded-2xl border border-slate-800/70 overflow-hidden shadow-lg hover:shadow-[0_25px_50px_-12px_rgba(20,184,166,0.18)] hover:border-teal-500/50 hover:scale-[1.03] flex flex-col justify-between group transition-all duration-500 ease-out"
+                className="bg-slate-950 rounded-2xl border border-slate-800/70 overflow-hidden shadow-lg hover:shadow-[0_25px_50px_-12px_rgba(20,184,166,0.18)] hover:border-teal-500/50 hover:scale-105 flex flex-col justify-between group transition-all duration-500 ease-out"
               >
                 {/* macOS Style Browser Header */}
                 <div className="bg-slate-900 border-b border-slate-800 px-4 py-3 flex items-center justify-between shrink-0 select-none">
@@ -353,7 +353,7 @@ export default function TemplatesPage() {
                       href={tpl.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full inline-flex items-center justify-center gap-2 py-3 bg-teal-500 hover:bg-teal-400 text-slate-950 rounded-xl text-xs font-bold transition-all duration-300 hover:scale-[1.01] shadow-md hover:shadow-teal-500/10 active:scale-99 group/btn cursor-pointer"
+                      className="w-full inline-flex items-center justify-center gap-2 py-3 bg-teal-500 hover:bg-teal-400 text-slate-950 rounded-xl text-xs font-bold transition-all duration-300 hover:scale-105 shadow-md hover:shadow-teal-500/10 active:scale-95 group/btn cursor-pointer"
                     >
                       <span>View Template</span>
                       <ExternalLink className="w-3.5 h-3.5 text-slate-950 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform duration-200" />
@@ -384,7 +384,7 @@ export default function TemplatesPage() {
             Ready To Launch Your Professional Doctor Website?
           </h2>
 
-          <p className="text-slate-350 text-xs sm:text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+          <p className="text-slate-400 text-xs sm:text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
             Choose your preferred template and send us a text on WhatsApp. We will configure your web domains, publish your clinical resume, inject SEO schemas, and secure your live URL within 48 hours.
           </p>
 

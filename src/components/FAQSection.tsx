@@ -67,7 +67,7 @@ export default function FAQSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.08 }}
-                className={`bg-white border rounded-2xl overflow-hidden transition-all duration-300 shadow-sm ${isOpen ? "border-slate-900" : "border-slate-200/80 hover:border-slate-350"}`}
+                className={`bg-white border rounded-2xl overflow-hidden transition-all duration-300 shadow-sm ${isOpen ? "border-slate-900" : "border-slate-200/80 hover:border-slate-400"}`}
               >
                 {/* Trigger Row */}
                 <button 
@@ -93,7 +93,7 @@ export default function FAQSection() {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.35, ease: "easeInOut" }}
                     >
-                      <div className="px-6 pb-6 pt-1 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-150 bg-slate-50/20 text-justify font-medium">
+                      <div className="px-6 pb-6 pt-1 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-200 bg-slate-50/20 text-justify font-medium">
                         {item.a}
                       </div>
                     </motion.div>
@@ -128,7 +128,7 @@ export default function FAQSection() {
             href="https://wa.me/8801902646475"
             target="_blank"
             rel="noopener noreferrer"
-            className="py-3 px-5 bg-teal-500 hover:bg-teal-600 text-slate-950 font-display font-bold text-xs uppercase tracking-widest rounded-xl transition-all shadow-lg hover:shadow-teal-500/20 active:scale-98 relative z-10"
+            className="py-3 px-5 bg-teal-500 hover:bg-teal-600 text-slate-950 font-display font-bold text-xs uppercase tracking-widest rounded-xl transition-all shadow-lg hover:shadow-teal-500/20 active:scale-95 relative z-10"
           >
             Chat with Engineering
           </a>

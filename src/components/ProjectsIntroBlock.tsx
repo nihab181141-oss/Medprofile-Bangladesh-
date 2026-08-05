@@ -57,7 +57,7 @@ export default function ProjectsIntroBlock({ setCurrentView }: ProjectsIntroBloc
               <div className="pt-4 flex flex-wrap gap-4 items-center">
                 <button
                   onClick={handleNavigateToProjects}
-                  className="inline-flex items-center gap-2.5 px-8 py-4 bg-teal-500 hover:bg-teal-400 text-slate-950 rounded-full text-sm font-bold tracking-wide shadow-lg shadow-teal-500/20 hover:shadow-xl hover:shadow-teal-500/30 hover:-translate-y-0.5 active:translate-y-0 active:scale-98 transition-all duration-300 cursor-pointer group"
+                  className="inline-flex items-center gap-2.5 px-8 py-4 bg-teal-500 hover:bg-teal-400 text-slate-950 rounded-full text-sm font-bold tracking-wide shadow-lg shadow-teal-500/20 hover:shadow-xl hover:shadow-teal-500/30 hover:-translate-y-0.5 active:translate-y-0 active:scale-95 transition-all duration-300 cursor-pointer group"
                 >
                   <span>View Our Projects</span>
                   <ArrowRight className="w-4 h-4 text-slate-950 transition-transform duration-300 group-hover:translate-x-1" />

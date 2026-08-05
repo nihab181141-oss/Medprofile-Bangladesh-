@@ -50,7 +50,7 @@ export default function PricingSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <span className="text-xs uppercase font-extrabold text-teal-650 tracking-widest block mb-2.5 font-display">Transparent Pricing</span>
+          <span className="text-xs uppercase font-extrabold text-teal-600 tracking-widest block mb-2.5 font-display">Transparent Pricing</span>
           <h2 className="font-display font-extrabold text-3xl md:text-5xl text-slate-900 tracking-tight leading-tight">
             Clear, Institutional Investment Structure
           </h2>
@@ -139,7 +139,7 @@ export default function PricingSection() {
               </p>
 
               {/* Support Cost block */}
-              <div className="my-6 py-6 border-y border-slate-250">
+              <div className="my-6 py-6 border-y border-slate-300">
                 <div className="flex items-baseline gap-1.5">
                   <span className="text-lg text-slate-400 font-bold">৳</span>
                   <span className="text-4xl md:text-5xl font-display font-black text-slate-800 tracking-tight">5,000</span>
@@ -164,7 +164,7 @@ export default function PricingSection() {
               <div className="p-5 bg-white border border-slate-200/80 rounded-2xl shadow-sm">
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-[11px] font-extrabold text-slate-800 uppercase tracking-wide flex items-center gap-1.5">
-                    <Sparkles className="w-4 h-4 text-teal-650" /> Custom Feature Add-ons:
+                    <Sparkles className="w-4 h-4 text-teal-600" /> Custom Feature Add-ons:
                   </span>
                   <span className="text-[10px] font-mono text-slate-500 bg-slate-50 px-2.5 py-0.5 rounded border border-slate-100 font-bold">Flexible Scaling</span>
                 </div>
@@ -173,6 +173,7 @@ export default function PricingSection() {
                   <span className="text-xs text-slate-500 font-medium">Want additional custom features?</span>
                   <div className="flex items-center border border-slate-200 rounded-xl overflow-hidden shrink-0 select-none">
                     <button 
+                      aria-label="Decrease custom features"
                       onClick={() => setExtraFeaturesCount(prev => Math.max(0, prev - 1))}
                       className="px-3 py-1.5 bg-slate-50 hover:bg-slate-100 font-extrabold border-r border-slate-200 cursor-pointer text-sm text-slate-600 transition-colors"
                     >
@@ -180,6 +181,7 @@ export default function PricingSection() {
                     </button>
                     <span className="px-5 py-1.5 font-mono text-xs font-extrabold text-slate-800">{extraFeaturesCount}</span>
                     <button 
+                      aria-label="Increase custom features"
                       onClick={() => setExtraFeaturesCount(prev => Math.min(10, prev + 1))}
                       className="px-3 py-1.5 bg-slate-50 hover:bg-slate-100 font-extrabold border-l border-slate-200 cursor-pointer text-sm text-slate-600 transition-colors"
                     >
@@ -201,7 +203,7 @@ export default function PricingSection() {
                     </div>
                     <div className="flex justify-between text-slate-600">
                       <span>Add-on Monthly Fee (+৳500/ea):</span>
-                      <span className="font-extrabold text-slate-00">+৳{(extraFeaturesCount * ADDON_MONTHLY_UNIT).toLocaleString()}</span>
+                      <span className="font-extrabold text-slate-800">+৳{(extraFeaturesCount * ADDON_MONTHLY_UNIT).toLocaleString()}</span>
                     </div>
                     <div className="pt-2 px-1.5 pb-0.5 border-t border-teal-200/50 flex justify-between font-bold text-teal-950 font-display text-sm tracking-tight bg-teal-50/85 mt-2 rounded">
                       <span>Adjusted Total Setup:</span>
@@ -218,7 +220,7 @@ export default function PricingSection() {
             </div>
 
             <div className="pt-6 border-t border-slate-200 mt-8 text-[11px] text-slate-400 flex items-start gap-2.5 leading-relaxed font-medium">
-              <AlertCircle className="w-4 h-4 text-slate-450 shrink-0 mt-0.5" />
+              <AlertCircle className="w-4 h-4 text-slate-500 shrink-0 mt-0.5" />
               <span>
                 Setup and Monthly charges are billed transparently. Custom feature updates (over the core scope) are tracked at flat scale of ৳1,000/setup and ৳500/month respectively.
               </span>

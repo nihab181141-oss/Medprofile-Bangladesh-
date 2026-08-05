@@ -161,7 +161,7 @@ export default function OurProjects() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-slate-650 text-base sm:text-lg md:text-xl font-normal leading-relaxed max-w-3xl mx-auto mb-10"
+            className="text-slate-600 text-base sm:text-lg md:text-xl font-normal leading-relaxed max-w-3xl mx-auto mb-10"
           >
             Explore the professional doctor websites developed by MedProfile Bangladesh and see how we help healthcare professionals build a powerful digital identity online.
           </motion.p>
@@ -176,7 +176,7 @@ export default function OurProjects() {
             {trustBadges.map((badge, index) => (
               <span
                 key={index}
-                className="inline-flex items-center gap-1.5 bg-white border border-slate-200/80 px-4 py-2 rounded-full text-xs font-bold text-slate-700 shadow-sm transition-all duration-300 hover:border-teal-200 hover:shadow-md hover:scale-102"
+                className="inline-flex items-center gap-1.5 bg-white border border-slate-200/80 px-4 py-2 rounded-full text-xs font-bold text-slate-700 shadow-sm transition-all duration-300 hover:border-teal-200 hover:shadow-md hover:scale-105"
               >
                 <Check className="w-3.5 h-3.5 text-teal-600" />
                 {badge}
@@ -202,7 +202,7 @@ export default function OurProjects() {
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 placeholder="Search projects by doctor, specialty, or city..."
-                className="block w-full pl-11 pr-4 py-3 bg-white border border-slate-250 rounded-2xl text-slate-900 text-sm font-semibold placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 shadow-sm transition-all duration-200"
+                className="block w-full pl-11 pr-4 py-3 bg-white border border-slate-300 rounded-2xl text-slate-900 text-sm font-semibold placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 shadow-sm transition-all duration-200"
               />
             </div>
 
@@ -215,7 +215,7 @@ export default function OurProjects() {
                   className={`px-4 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition-all duration-200 select-none cursor-pointer border ${
                     activeCategory === category
                       ? "bg-slate-950 text-white border-slate-950 shadow-md"
-                      : "bg-white text-slate-650 hover:text-slate-900 border-slate-200/80 hover:border-slate-300 shadow-sm"
+                      : "bg-white text-slate-600 hover:text-slate-900 border-slate-200/80 hover:border-slate-300 shadow-sm"
                   }`}
                 >
                   {category}
@@ -304,7 +304,7 @@ export default function OurProjects() {
                   href="https://wa.me/8801902646475"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-teal-500 hover:bg-teal-400 text-slate-950 text-xs font-bold uppercase rounded-full transition-all duration-200 shadow-md active:scale-98"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-teal-500 hover:bg-teal-400 text-slate-950 text-xs font-bold uppercase rounded-full transition-all duration-200 shadow-md active:scale-95"
                 >
                   <span>Launch Your Site</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
@@ -499,7 +499,7 @@ export default function OurProjects() {
               href="https://wa.me/8801902646475"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto px-8 py-4 bg-teal-500 hover:bg-teal-600 text-slate-950 rounded-full text-sm font-bold tracking-wide shadow-lg shadow-teal-500/20 hover:shadow-teal-500/30 hover:scale-103 active:scale-97 transition-all duration-200 flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-8 py-4 bg-teal-500 hover:bg-teal-600 text-slate-950 rounded-full text-sm font-bold tracking-wide shadow-lg shadow-teal-500/20 hover:shadow-teal-500/30 hover:scale-105 active:scale-95 transition-all duration-200 flex items-center justify-center gap-2"
             >
               <MessageSquare className="w-4 h-4 fill-slate-950 shrink-0" />
               <span>Get Started</span>
@@ -509,7 +509,7 @@ export default function OurProjects() {
               href="https://wa.me/8801902646475"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto px-8 py-4 bg-slate-900 border border-white/10 hover:border-white/20 text-white rounded-full text-sm font-bold hover:bg-slate-850 hover:scale-103 active:scale-97 transition-all duration-200 flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-8 py-4 bg-slate-900 border border-white/10 hover:border-white/20 text-white rounded-full text-sm font-bold hover:bg-slate-900 hover:scale-105 active:scale-95 transition-all duration-200 flex items-center justify-center gap-2"
             >
               <PhoneCall className="w-4 h-4 text-teal-400" />
               <span>Contact Us</span>

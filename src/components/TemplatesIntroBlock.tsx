@@ -46,7 +46,7 @@ export default function TemplatesIntroBlock({ setCurrentView }: TemplatesIntroBl
             <div className="pt-2 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
               <button
                 onClick={handleNavigateToTemplates}
-                className="inline-flex items-center gap-2 px-6 py-3.5 bg-slate-900 hover:bg-teal-600 text-white rounded-full text-xs font-bold tracking-wider uppercase transition-all duration-300 hover:scale-101 active:scale-98 shadow-md hover:shadow-lg hover:shadow-teal-600/10 cursor-pointer group"
+                className="inline-flex items-center gap-2 px-6 py-3.5 bg-slate-900 hover:bg-teal-600 text-white rounded-full text-xs font-bold tracking-wider uppercase transition-all duration-300 hover:scale-105 active:scale-95 shadow-md hover:shadow-lg hover:shadow-teal-600/10 cursor-pointer group"
               >
                 <span>View Templates →</span>
               </button>
@@ -64,7 +64,7 @@ export default function TemplatesIntroBlock({ setCurrentView }: TemplatesIntroBl
             {/* Mock layout card 1 */}
             <div 
               onClick={handleNavigateToTemplates}
-              className="bg-white p-5 rounded-2xl shadow-[0_10px_30px_rgba(15,23,42,0.03)] hover:shadow-[0_15px_35px_rgba(15,23,42,0.06)] hover:scale-[1.01] transition-all duration-300 cursor-pointer group flex flex-col justify-between h-40"
+              className="bg-white p-5 rounded-2xl shadow-[0_10px_30px_rgba(15,23,42,0.03)] hover:shadow-[0_15px_35px_rgba(15,23,42,0.06)] hover:scale-105 transition-all duration-300 cursor-pointer group flex flex-col justify-between h-40"
             >
               <div className="flex justify-between items-start">
                 <div className="w-8 h-8 rounded-lg bg-teal-50 border border-teal-100 text-teal-600 flex items-center justify-center font-bold text-xs">
@@ -81,7 +81,7 @@ export default function TemplatesIntroBlock({ setCurrentView }: TemplatesIntroBl
             {/* Mock layout card 2 */}
             <div 
               onClick={handleNavigateToTemplates}
-              className="bg-white p-5 rounded-2xl shadow-[0_10px_30px_rgba(15,23,42,0.03)] hover:shadow-[0_15px_35px_rgba(15,23,42,0.06)] hover:scale-[1.01] transition-all duration-300 cursor-pointer group flex flex-col justify-between h-40"
+              className="bg-white p-5 rounded-2xl shadow-[0_10px_30px_rgba(15,23,42,0.03)] hover:shadow-[0_15px_35px_rgba(15,23,42,0.06)] hover:scale-105 transition-all duration-300 cursor-pointer group flex flex-col justify-between h-40"
             >
               <div className="flex justify-between items-start">
                 <div className="w-8 h-8 rounded-lg bg-sky-50 border border-sky-100 text-sky-600 flex items-center justify-center font-bold text-xs">

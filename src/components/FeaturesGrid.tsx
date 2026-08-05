@@ -98,7 +98,7 @@ export default function FeaturesGrid() {
           <div className="max-w-2xl">
             <span className="text-xs uppercase font-extrabold text-teal-600 tracking-widest block mb-2.5 font-display">Technical Portfolio</span>
             <h2 className="font-display font-bold text-3xl md:text-5xl text-slate-900 tracking-tight leading-tight">
-              Everything thin a <span className="text-teal-600">Modern Doctor</span> Needs for Digital Prominence
+              Everything a <span className="text-teal-600">Modern Doctor</span> Needs for Digital Prominence
             </h2>
           </div>
           <p className="text-slate-500 text-sm leading-relaxed max-w-sm font-medium">
@@ -128,10 +128,10 @@ export default function FeaturesGrid() {
                 className="bg-white p-6 rounded-2xl shadow-[0_15px_40px_rgba(15,23,42,0.035)] transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-10 h-10 rounded-xl bg-teal-50 text-teal-700 flex items-center justify-center mb-5 border border-teal-150/40 transition-transform duration-300 group-hover:scale-105">
+                  <div className="w-10 h-10 rounded-xl bg-teal-50 text-teal-700 flex items-center justify-center mb-5 border border-teal-200/40 transition-transform duration-300 group-hover:scale-105">
                     <Icon className="w-5 h-5 stroke-[2.2]" />
                   </div>
-                  <h3 className="font-display font-bold text-slate-850 text-sm tracking-tight mb-2">
+                  <h3 className="font-display font-bold text-slate-900 text-sm tracking-tight mb-2">
                     {item.title}
                   </h3>
                   <p className="text-slate-500 text-[11px] sm:text-xs leading-relaxed text-left font-medium">

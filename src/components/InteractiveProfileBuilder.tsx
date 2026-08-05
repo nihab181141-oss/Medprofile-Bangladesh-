@@ -460,7 +460,7 @@ export default function InteractiveProfileBuilder() {
             <button 
               onClick={triggerAIOptimization}
               disabled={loading}
-              className="w-full py-3.5 px-4 rounded-xl font-display font-bold text-xs tracking-wider uppercase text-white bg-teal-600 hover:bg-teal-700 active:scale-98 shadow-lg shadow-teal-100 transition-all cursor-pointer flex items-center justify-center gap-2"
+              className="w-full py-3.5 px-4 rounded-xl font-display font-bold text-xs tracking-wider uppercase text-white bg-teal-600 hover:bg-teal-700 active:scale-95 shadow-lg shadow-teal-100 transition-all cursor-pointer flex items-center justify-center gap-2"
               id="ai-generate-profile-btn"
             >
               {loading ? (
@@ -495,7 +495,7 @@ export default function InteractiveProfileBuilder() {
       {/* RIGHT COLUMN: REVENUE & SITE PREVIEW SIMULATOR */}
       <div className="lg:col-span-7 flex flex-col">
         {/* Toggle between Mockup Website view, SEO Google and Strategy */}
-        <div className="flex border-b border-slate-200 bg-slate-50/70 p-1.5 rounded-t-2xl border border-slate-150 border-b-0">
+        <div className="flex border-b border-slate-200 bg-slate-50/70 p-1.5 rounded-t-2xl border border-slate-200 border-b-0">
           <button 
             onClick={() => setActiveTab("website")}
             className={`flex-1 py-2 px-3 rounded-lg text-xs font-semibold tracking-wide transition-all cursor-pointer flex items-center justify-center gap-1.5 ${activeTab === "website" ? "bg-white text-teal-800 shadow-sm" : "text-slate-500 hover:text-slate-800"}`}
@@ -520,7 +520,7 @@ export default function InteractiveProfileBuilder() {
         </div>
 
         {/* CONTAINER FOR PREVIEWS */}
-        <div className="bg-slate-50/70 rounded-b-2xl border border-slate-150 p-3 md:p-6 min-h-[580px] shadow-inner flex flex-col justify-start">
+        <div className="bg-slate-50/70 rounded-b-2xl border border-slate-200 p-3 md:p-6 min-h-[580px] shadow-inner flex flex-col justify-start">
           <AnimatePresence mode="wait">
             
             {/* TAB 1: WEBSITE PREVIEW MOCKUP */}

@@ -73,7 +73,7 @@ export default function ContactAndGallery() {
           {/* Top Navbar */}
           <div className="flex items-center justify-between border-b border-white/5 pb-2">
             <span className="text-[9px] font-sans font-black text-sky-400 tracking-tight">PinnacleHealth</span>
-            <span className="text-[7px] text-slate-450 bg-white/5 px-2 py-0.5 rounded border border-white/5 font-mono">Chamber Live</span>
+            <span className="text-[7px] text-slate-500 bg-white/5 px-2 py-0.5 rounded border border-white/5 font-mono">Chamber Live</span>
           </div>
           {/* Hero segment */}
           <div className="space-y-1.5 pt-3">
@@ -82,9 +82,9 @@ export default function ContactAndGallery() {
               Surgically Polished Pediatric Care Suite
             </h4>
             <div className="grid grid-cols-3 gap-1 pt-1">
-              <span className="bg-white/5 py-1 text-center rounded text-[7px] text-slate-350 border border-white/5">Sat-Mon</span>
+              <span className="bg-white/5 py-1 text-center rounded text-[7px] text-slate-400 border border-white/5">Sat-Mon</span>
               <span className="bg-sky-500/15 py-1 text-center rounded text-[7px] text-sky-400 border border-sky-500/10">04:00 PM</span>
-              <span className="bg-white/5 py-1 text-center rounded text-[7px] text-slate-350 border border-white/5">Dhanmondi</span>
+              <span className="bg-white/5 py-1 text-center rounded text-[7px] text-slate-400 border border-white/5">Dhanmondi</span>
             </div>
           </div>
           {/* Footer stats */}
@@ -297,7 +297,7 @@ export default function ContactAndGallery() {
                   target="_blank"
                   referrerPolicy="no-referrer"
                   rel="noopener noreferrer"
-                  className="w-full py-4 px-4 bg-emerald-500 hover:bg-emerald-600 text-white font-display font-extrabold text-xs uppercase tracking-widest rounded-2xl flex items-center justify-center gap-2.5 transition-colors duration-200 active:scale-98 shadow-md shadow-emerald-500/15"
+                  className="w-full py-4 px-4 bg-emerald-500 hover:bg-emerald-600 text-white font-display font-extrabold text-xs uppercase tracking-widest rounded-2xl flex items-center justify-center gap-2.5 transition-colors duration-200 active:scale-95 shadow-md shadow-emerald-500/15"
                 >
                   <span>Connect via WhatsApp</span>
                   <ArrowUpRight className="w-4 h-4 text-white" />
@@ -349,7 +349,7 @@ export default function ContactAndGallery() {
                   target="_blank"
                   referrerPolicy="no-referrer"
                   rel="noopener noreferrer"
-                  className="w-full py-4 px-4 bg-sky-500 hover:bg-sky-600 text-white font-display font-extrabold text-xs uppercase tracking-widest rounded-2xl flex items-center justify-center gap-2.5 transition-colors duration-200 active:scale-98 shadow-md shadow-sky-500/15"
+                  className="w-full py-4 px-4 bg-sky-500 hover:bg-sky-600 text-white font-display font-extrabold text-xs uppercase tracking-widest rounded-2xl flex items-center justify-center gap-2.5 transition-colors duration-200 active:scale-95 shadow-md shadow-sky-500/15"
                 >
                   <span>Visit Facebook Page</span>
                   <ArrowUpRight className="w-4 h-4 text-white" />
@@ -389,7 +389,7 @@ export default function ContactAndGallery() {
                 </div>
               </div>
 
-              <div className="mt-8 pt-4 border-t border-slate-150">
+              <div className="mt-8 pt-4 border-t border-slate-200">
                 <button
                   disabled
                   className="w-full py-4 px-4 bg-slate-100 text-slate-400 font-display font-bold text-xs uppercase tracking-widest rounded-2xl flex items-center justify-center gap-2 cursor-not-allowed select-none"
@@ -410,7 +410,7 @@ export default function ContactAndGallery() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mt-16 text-center max-w-xl mx-auto p-6 bg-slate-50/50 border border-slate-200/50 rounded-2xl"
           >
-            <p className="text-[10px] sm:text-xs text-slate-450 leading-relaxed font-semibold">
+            <p className="text-[10px] sm:text-xs text-slate-500 leading-relaxed font-semibold">
               MedProfile Bangladesh is dedicated to establishing credible medical footprints. If you have questions regarding legal frameworks, regional medical associations compliance, or high availability custom cloud security setup packages, reach out immediately.
             </p>
           </motion.div>

@@ -88,7 +88,7 @@ export default function Header({ currentView, setCurrentView }: HeaderProps) {
           <button 
             onClick={navigateToProjects}
             className={`transition-colors cursor-pointer relative py-1.5 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-teal-600 after:transition-all after:duration-300 flex items-center gap-1 group/proj ${
-              currentView === "projects" ? "text-teal-600 font-extrabold after:w-full" : "hover:text-teal-600 text-slate-650"
+              currentView === "projects" ? "text-teal-600 font-extrabold after:w-full" : "hover:text-teal-600 text-slate-600"
             }`}
           >
             <span>Our Projects</span>
@@ -99,12 +99,12 @@ export default function Header({ currentView, setCurrentView }: HeaderProps) {
             className="hover:text-teal-600 transition-colors cursor-pointer flex items-center gap-1.5 relative py-1.5 group/btn"
           >
             Interactive Demo
-            <span className="text-[9px] font-bold text-teal-600 bg-teal-50 px-1.5 py-0.5 rounded border border-teal-150 group-hover/btn:bg-teal-600 group-hover/btn:text-white transition-all duration-300">Builder</span>
+            <span className="text-[9px] font-bold text-teal-600 bg-teal-50 px-1.5 py-0.5 rounded border border-teal-200 group-hover/btn:bg-teal-600 group-hover/btn:text-white transition-all duration-300">Builder</span>
           </button>
           <button 
             onClick={navigateToTemplates}
             className={`transition-colors cursor-pointer relative py-1.5 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-teal-600 after:transition-all after:duration-300 flex items-center gap-1 group/tpl ${
-              currentView === "templates" ? "text-teal-600 font-extrabold after:w-full" : "hover:text-teal-600 text-slate-651"
+              currentView === "templates" ? "text-teal-600 font-extrabold after:w-full" : "hover:text-teal-600 text-slate-600"
             }`}
           >
             <span>Templates</span>
@@ -190,7 +190,7 @@ export default function Header({ currentView, setCurrentView }: HeaderProps) {
               className="w-full text-left py-2 px-3 text-sm font-bold text-slate-700 hover:bg-slate-50 hover:text-teal-600 rounded-lg transition-colors flex items-center justify-between"
             >
               <span>Interactive Demo Builder</span>
-              <span className="text-[8px] uppercase tracking-wider font-extrabold text-teal-600 bg-teal-50 px-2 py-0.5 rounded border border-teal-150">Active</span>
+              <span className="text-[8px] uppercase tracking-wider font-extrabold text-teal-600 bg-teal-50 px-2 py-0.5 rounded border border-teal-200">Active</span>
             </button>
             <button 
               onClick={navigateToTemplates}
@@ -199,7 +199,7 @@ export default function Header({ currentView, setCurrentView }: HeaderProps) {
               }`}
             >
               <span>Website Templates</span>
-              <span className="text-[8px] uppercase tracking-wider font-extrabold text-teal-600 bg-teal-50 px-2 py-0.5 rounded border border-teal-150">6 Designs</span>
+              <span className="text-[8px] uppercase tracking-wider font-extrabold text-teal-600 bg-teal-50 px-2 py-0.5 rounded border border-teal-200">6 Designs</span>
             </button>
             <button 
               onClick={() => navigateToSection("pricing-section")}
@@ -221,7 +221,7 @@ export default function Header({ currentView, setCurrentView }: HeaderProps) {
             </button>
           </div>
 
-          <div className="pt-4 border-t border-slate-150 flex flex-col gap-3">
+          <div className="pt-4 border-t border-slate-200 flex flex-col gap-3">
             {/* Primary High-converting WhatsApp Link in Mobile responsive menu */}
             <a 
               href="https://wa.me/8801902646475"

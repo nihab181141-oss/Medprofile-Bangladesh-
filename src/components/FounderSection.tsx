@@ -94,7 +94,7 @@ export default function FounderSection() {
                 </p>
               </div>
 
-              <p className="text-slate-650 text-sm md:text-base leading-relaxed font-normal">
+              <p className="text-slate-600 text-sm md:text-base leading-relaxed font-normal">
                 As the Founder & CEO of MedProfile Bangladesh, I am committed to helping doctors establish a strong digital presence and professional identity online. Our mission is to make healthcare professionals more accessible, visible, and trusted by patients through modern technology and premium web solutions.
               </p>
 
