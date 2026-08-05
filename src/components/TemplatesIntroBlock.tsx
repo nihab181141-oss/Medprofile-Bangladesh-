@@ -9,7 +9,6 @@ export default function TemplatesIntroBlock({ setCurrentView }: TemplatesIntroBl
   const handleNavigateToTemplates = () => {
     setCurrentView("templates");
     window.history.pushState(null, "", "/templates");
-    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (

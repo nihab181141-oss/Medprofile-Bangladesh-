@@ -9,7 +9,6 @@ export default function ProjectsIntroBlock({ setCurrentView }: ProjectsIntroBloc
   const handleNavigateToProjects = () => {
     setCurrentView("projects");
     window.history.pushState(null, "", "/projects");
-    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
